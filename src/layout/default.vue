@@ -6,28 +6,29 @@
     <el-container>
         <el-header>
             <el-menu
+                :router="true"
                 :ellipsis="false"
                 mode="horizontal">
-                <el-menu-item index="0">
+                <el-menu-item index="/">
                     <router-link to="/">Mapping Morality</router-link>
                 </el-menu-item>
-                <el-menu-item index="1">
-                    <router-link to="/introduction">Introduction</router-link>
+                <el-menu-item index="introduction">
+                    Introduction
                 </el-menu-item>
-                <el-sub-menu index="2">
+                <el-sub-menu index="pilot">
                     <template #title>Data</template>
-                    <el-menu-item index="2-1">
-                        <router-link to="/pilot">Study 1: Symmetric</router-link>
+                    <el-menu-item index="pilot">
+                        Study 1: Symmetric
                     </el-menu-item>
-                    <el-menu-item index="2-2">
-                        <router-link to="/pilot">Study 2: Across culture</router-link>
+                    <el-menu-item index="pilot">
+                        Study 2: Across culture
                     </el-menu-item>
-                    <el-menu-item index="2-3">
-                        <router-link to="/pilot">Study 3: Across time</router-link>
+                    <el-menu-item index="pilot">
+                        Study 3: Across time
                     </el-menu-item>
                 </el-sub-menu>
-                <el-menu-item index="3">
-                    <router-link to="/sos">Our SOS Framework</router-link>
+                <el-menu-item index="sos">
+                    Our SOS Framework
                 </el-menu-item>
             </el-menu>
         </el-header>
