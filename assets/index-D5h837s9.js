@@ -1,0 +1,1 @@
+import{l as t}from"./default-DKlFeyBf.js";import{d as n,c as s,w as a,r,o as l,a as o}from"./index-DpLT8smD.js";const d=n({__name:"index",setup(c){return(_,p)=>{const e=r("el-skeleton");return l(),s(t,null,{default:a(()=>[o(e,{rows:4}),o(e,{rows:4})]),_:1})}}});export{d as default};
