@@ -17,13 +17,13 @@
                 </el-menu-item>
                 <el-sub-menu index="pilot">
                     <template #title>Data</template>
-                    <el-menu-item index="pilot">
+                    <el-menu-item index="pilot?to=study1">
                         Study 1: Symmetric
                     </el-menu-item>
-                    <el-menu-item index="pilot">
+                    <el-menu-item index="pilot?to=study2">
                         Study 2: Across culture
                     </el-menu-item>
-                    <el-menu-item index="pilot">
+                    <el-menu-item index="pilot?to=study3">
                         Study 3: Across time
                     </el-menu-item>
                 </el-sub-menu>

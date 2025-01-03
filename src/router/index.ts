@@ -28,4 +28,8 @@ const router = createRouter({
   ]
 });
 
+// router.beforeEach((_, _, next) => {
+//   next();
+// });
+
 export default router;

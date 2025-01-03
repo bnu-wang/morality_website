@@ -4,7 +4,8 @@ import layout from "../../layout/default.vue";
 
 <template>
     <layout>
-        ddd
+        <el-skeleton :rows="10"></el-skeleton>
+        <el-skeleton :rows="10"></el-skeleton>
     </layout>
 </template>
 
