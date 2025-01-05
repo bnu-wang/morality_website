@@ -5,7 +5,7 @@ import layout from "../../layout/default.vue";
 
 <template>
     <layout>
-        <el-skeleton :rows="4"></el-skeleton>
+        <h1><span style="color: red;">S</span>ociety-<span style="color: red;">O</span>ther-<span style="color: red;">S</span>elf</h1>
         <el-skeleton :rows="4"></el-skeleton>
     </layout>
 </template>
