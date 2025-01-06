@@ -1,0 +1,1 @@
+import{_ as t}from"./default.vue_vue_type_script_setup_true_lang-D9-1jXce.js";import{d as n,c as s,w as a,r,o as l,a as _,b as c}from"./index-B9e3viND.js";const u=n({__name:"index",setup(m){return(p,e)=>{const o=r("el-skeleton");return l(),s(t,null,{default:a(()=>[e[0]||(e[0]=_("h1",null,"Introduction",-1)),c(o,{rows:10})]),_:1})}}});export{u as default};
