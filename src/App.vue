@@ -2,7 +2,7 @@
 import { useColorScheme } from './store/colorTheme';
 
 const cs = useColorScheme();
-cs.switch("dark");
+// cs.switch("dark");
 </script>
 
 <template>
