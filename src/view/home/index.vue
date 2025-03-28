@@ -33,7 +33,7 @@ import CustomButton from "../../components/customButton.vue";
     display: inline-block;
     width: calc(194px * var(--scale));
     height: calc(165px * var(--scale));
-    background-image: url("./assets/image/2025032801.png");
+    background-image: url("./image/2025032801.png");
     background-size: contain;
 }
 .rbox {
