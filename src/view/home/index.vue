@@ -73,7 +73,7 @@ import CustomButton from "../../components/customButton.vue";
 
 @media screen and (max-width: 520px) {
     .lbox { --scale: 2; }
-    .rbox { width: 400px; }
+    .rbox { width: 95%; }
     .desc-box { font-size: 14px; }
     .footer-box .button-box {
         flex-direction: column;
