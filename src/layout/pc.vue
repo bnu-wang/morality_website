@@ -39,6 +39,10 @@
 </template>
 
 <style scoped>
+:deep(.el-main) {
+    min-height: calc(100vh - 60px);
+}
+
 .el-menu--horizontal > .el-menu-item:nth-child(1) {
   margin-right: auto;
 }
