@@ -19,9 +19,9 @@ const click = (e: MouseEvent) => {
             <p>Do you know what morality is in the eyes of philosophers and religious scriptures?</p>
             <p>Click on the avatar to reveal the answer.</p>
         </div>
-        <div class="ele"></div>
+        <div class="ele" style="background-image: url('./assets/image/2025032901.png');"></div>
         <template v-for="(item, index) in avators">
-            <div class="avator" :style="`--i: ${index}; --img: url(${item.img}); --q: '${item.q}'; --a: '${item.a}';`" @click.once="click"></div>
+            <div class="avator" :style="`--i: ${index}; background-image: url(${item.img}); --q: '${item.q}'; --a: '${item.a}';`" @click.once="click"></div>
         </template>
     </div>
 </template>
@@ -34,7 +34,6 @@ const click = (e: MouseEvent) => {
     margin: 0 auto;
     position: relative;
     color: grey;
-    overflow: hidden;
 }
 
 .interaction-avator .text {
@@ -50,7 +49,6 @@ const click = (e: MouseEvent) => {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url("./assets/image/2025032901.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -69,7 +67,6 @@ const click = (e: MouseEvent) => {
     position: absolute;
     top: 45%;
     left: 50%;
-    background-image: var(--img);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -107,7 +104,8 @@ const click = (e: MouseEvent) => {
 
 @media screen and (max-width: 400px) {
     .interaction-avator {
-        width: 100%;
+        transform-origin: 0 0;
+        transform: scale(0.8);
     }
 }
 </style>

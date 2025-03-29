@@ -8,6 +8,8 @@
 <style lang="css" scoped>
 .para {
     display: block;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 25px 0 10px 0;
     background-image: linear-gradient(rgba(255, 211, 175, 1), rgba(255, 211, 175, 1)),
                       linear-gradient(rgba(255, 211, 175, 1), rgba(255, 211, 175, 1)),
