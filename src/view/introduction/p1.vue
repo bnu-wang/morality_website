@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import CustomSlider1 from '../../components/customSlider1.vue';
+import CustomSlider from '../../components/customSlider1.vue';
 import InteractionAvator from './components/InteractionAvator.vue';
 
 
 </script>
 
 <template>
-    <CustomSlider1>
+    <CustomSlider>
         <template #title>
             <h1>Essence of morality</h1>
         </template>
@@ -19,7 +19,7 @@ import InteractionAvator from './components/InteractionAvator.vue';
                 </div>
             </div>
         </template>
-    </CustomSlider1>
+    </CustomSlider>
 </template>
 
 <style lang="css" scoped>
@@ -46,7 +46,8 @@ import InteractionAvator from './components/InteractionAvator.vue';
         max-width: 900px;
     }
     .text {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 1.5em;
         grid-column: 7 / 12;
     }
 }

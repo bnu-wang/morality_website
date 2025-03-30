@@ -7,7 +7,8 @@
 <style lang="css" scoped>
 .para {
     display: block;
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     box-sizing: border-box;
     padding: 64px 30px 30px 64px;
     background-color: rgba(79, 86, 255, 1);
