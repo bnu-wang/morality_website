@@ -1,0 +1,1 @@
+import{_ as o}from"./index-C6SKf-Mg.js";import{o as s,i as r,e as t}from"./vendor-XQTGviem.js";const n={},c={class:"para"};function a(e,d){return s(),r("div",c,[t(e.$slots,"title",{},void 0,!0),t(e.$slots,"content",{},void 0,!0)])}const f=o(n,[["render",a],["__scopeId","data-v-c6ffac47"]]);export{f as C};
