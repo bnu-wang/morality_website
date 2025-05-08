@@ -7,7 +7,7 @@ import { MoreFilled } from '@element-plus/icons-vue';
         <el-header>
             <el-menu :router="true" :ellipsis="false" mode="horizontal">
                 <el-menu-item index="/">
-                    Mapping Morality
+                    Mapping Human Morality
                 </el-menu-item>
                 <el-menu-item>
                     <el-dropdown placement="bottom-end" trigger="click">

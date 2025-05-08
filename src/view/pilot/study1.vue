@@ -79,7 +79,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div>
+    <div style="max-width: 1200px; margin: 0 auto;">
         <h1 id="study1">Study1: Self-Interpersonal-Society SIS model</h1>
         <custom-slider>
             <h2>Interactive plot</h2>

@@ -10,7 +10,7 @@
                 :ellipsis="false"
                 mode="horizontal">
                 <el-menu-item index="/">
-                    Mapping Morality
+                    Mapping Human Morality
                 </el-menu-item>
                 <el-menu-item index="introduction">
                     Introduction
