@@ -7,7 +7,7 @@ const showDrawer2 = ref(false);
 </script>
 
 <template>
-    <div>
+    <div class="container">
         <h1 id="study2">Study2: Universal structure of morality across cultures</h1>
         <p>To test whether the conceptual space of morality is universal, we have collected data in China (N = 2,031).</p>
         <div class="box1">
@@ -32,6 +32,11 @@ const showDrawer2 = ref(false);
 </template>
 
 <style scoped>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .box1 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

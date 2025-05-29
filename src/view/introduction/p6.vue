@@ -7,6 +7,11 @@
 </template>
 
 <style lang="css" scoped>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .container img {
     width: 100%;
 }
