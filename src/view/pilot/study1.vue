@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { newPlot } from 'plotly.js-dist';
-import { onMounted, reactive, type Reactive } from 'vue';
+import { onMounted, reactive, ref, type Reactive } from 'vue';
 
 import customSlider from '../../components/customSlider2.vue';
 import selectInput from '../../components/selectInput.vue';
@@ -16,6 +16,8 @@ const data: Reactive<{
         words: []
     }
 });
+const showDrawer1 = ref(false);
+const showDrawer2 = ref(false);
 
 const selectAction = (item: any) => {
     const { index, type } = item;
@@ -81,6 +83,16 @@ onMounted(() => {
 <template>
     <div style="max-width: 1200px; margin: 0 auto;">
         <h1 id="study1">Study1: Self-Interpersonal-Society SIS model</h1>
+        <div class="desc-box">
+            <div class="desc">
+                <p>Morality lies at the core of human society, shaping how people judge right from wrong. For centuries, religion and philosophy have guided moral thought through reflection and contemplation. In recent decades, morality has become a multidisciplinary topic, with contributions from philosophy, psychology, anthropology, and biology. To integrate these perspectives, we compiled 50 key features—28 immoral and 26 moral—from seven major theories across disciplines, capturing the core components of moral judgment.</p>
+                <p class="read-more" @click="showDrawer1 = true">read more</p>
+            </div>
+            <div class="desc">
+                <p>In Study 1, a large-scale survey (n = 1,327) asked U.S. participants to rate a wide range of moral and immoral actions. Using principal component analysis (PCA), we identified three key dimensions for each moral domain. For immoral actions: Unjust-Gain, Harm to Others, and Self-Indulgence; for moral actions: Sacrifice, Care for Others, and Self-Control. These six opposing factors reflect morality’s function across societal, interpersonal, and personal levels—together forming the SIS model (Societal, Interpersonal, Self). Compared to 15 leading theories, SIS showed the best data fit and cross-cultural generalizability.</p>
+                <p class="read-more" @click="showDrawer2 = true">read more</p>
+            </div>
+        </div>
         <custom-slider>
             <h2>Interactive plot</h2>
             <p style="text-align: justify;">Hover the mouse over the circle to explore all 100 evil and 100 good actions and their positions in the SIS space. Zoom in on an area with the mouse by framing it (and double click the enlarged area to restore to the original size).</p>
@@ -107,10 +119,55 @@ onMounted(() => {
                 </div>
             </div>
         </div>
+        <el-drawer 
+            v-model="showDrawer1"
+            direction="btt"
+            size="80%">
+            <img :src="'./assets/image/2025052904.png'" style="width: 100%;" />
+            <p><strong>Existing theories in morality science.</strong> 50 conceptual features (28 for immoral, 26 for moral) were summarized from seven prominent theories across different disciplines, supplemented by key moral features. Red = Immoral features, Green = Moral features. Double arrows link features of moral and immoral that are considered semantically symmetrical, while dotted lines link features that are considered semantically identical.</p>
+        </el-drawer>
+        <el-drawer 
+            v-model="showDrawer2"
+            direction="btt"
+            size="80%">
+            <img :src="'./assets/image/2025052905.png'" style="width: 100%;" />
+            <p><strong>Model comparison in the United States.</strong> a, To examine how well a model can represent all theoretical moral features, we used linear combinations of features in each model as regressors to predict each of the remaining theoretical features (that were not included in that model) and calculated the Bayesian Information Criterion (BIC). b, the model outperformed the other 15 existing models in data fitting.</p>
+        </el-drawer>
     </div>
 </template>
 
 <style scoped>
+.read-more {
+    margin: 20px 0;
+    opacity: .55;
+    text-align: right;
+    font-weight: 500;
+    color: rgba(68, 76, 252, 1);
+    cursor: pointer;
+    vertical-align: middle;
+}
+.read-more::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    margin: 0 5px;
+    background-color: rgba(68, 76, 252, 1);
+    vertical-align: middle;
+}
+
+.desc-box {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 30px;
+}
+.desc-box .desc {
+    grid-column: span 6;
+    text-align: justify;
+    font-size: 24px;
+    color: grey;
+}
+
 .select-input-box {
     display: flex;
     justify-content: space-around;
@@ -147,6 +204,10 @@ onMounted(() => {
 }
 
 @media screen and (max-width: 900px) {
+    .desc-box .desc {
+        grid-column: 1 / 13;
+    }
+
     .graph .plotly {
         width: 270px;
         height: 270px;

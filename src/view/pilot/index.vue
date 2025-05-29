@@ -7,7 +7,7 @@ import layout from "../../layout/default.vue";
 import Study1 from "./study1.vue";
 import Study2 from "./study2.vue";
 import Study3 from "./study3.vue";
-
+import study1Sp1 from "./study1-sp1.vue";
 const route = useRoute();
 
 // 解析URL参数
@@ -34,6 +34,7 @@ onMounted(() => {
 <template>
     <layout>
       <Study1></Study1>
+      <study1Sp1></study1Sp1>
       <Study2></Study2>
       <Study3></Study3>
     </layout>

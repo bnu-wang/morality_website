@@ -19,7 +19,7 @@ const click = (e: MouseEvent) => {
             <p>Do you know what morality is in the eyes of philosophers and religious scriptures?</p>
             <p>Click on the avatar to reveal the answer.</p>
         </div>
-        <div class="ele" style="background-image: url('./assets/image/2025032901.png');"></div>
+        <div class="ele" style="background-image: url('./assets/image/2025052903.png');"></div>
         <template v-for="(item, index) in avators">
             <div class="avator" :style="`--i: ${index}; background-image: url(${item.img}); --q: '${item.q}'; --a: '${item.a}';`" @click.once="click"></div>
         </template>
@@ -55,10 +55,13 @@ const click = (e: MouseEvent) => {
     color: black;
 }
 .ele::after {
-    content: "Morality?";
+    content: "?";
     position: absolute;
-    top: 43%;
-    left: 58%;
+    top: 50%;
+    left: 70%;
+    font: Arial;
+    font-size: 72px;
+    font-weight: 700;
 }
 
 .avator {
