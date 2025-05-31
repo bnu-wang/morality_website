@@ -1,0 +1,1 @@
+import{_ as o}from"./index-Dc9_5Umy.js";import{o as r,i as s,e as t}from"./vendor-XQTGviem.js";const a={},c={class:"para"};function n(e,d){return r(),s("div",c,[t(e.$slots,"default",{},void 0,!0)])}const i=o(a,[["render",n],["__scopeId","data-v-f1efd6d5"]]);export{i as C};
