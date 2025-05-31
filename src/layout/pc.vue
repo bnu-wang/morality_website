@@ -4,7 +4,7 @@
 
 <template>
     <el-container>
-        <el-header>
+        <el-header class="dark">
             <el-menu
                 :router="true"
                 :ellipsis="false"
@@ -16,19 +16,19 @@
                     Introduction
                 </el-menu-item>
                 <el-sub-menu index="pilot">
-                    <template #title>Data</template>
+                    <template #title>Pilot Data</template>
                     <el-menu-item index="pilot?to=study1">
-                        Study 1: Symmetric
+                        Study 1: Model structure
                     </el-menu-item>
                     <el-menu-item index="pilot?to=study2">
-                        Study 2: Across culture
+                        Study 2: Cultural comparison
                     </el-menu-item>
                     <el-menu-item index="pilot?to=study3">
-                        Study 3: Across time
+                        Study 3: Historical evolution
                     </el-menu-item>
                 </el-sub-menu>
                 <el-menu-item index="sos">
-                    Our SOS Framework
+                    Maps and Data
                 </el-menu-item>
             </el-menu>
         </el-header>

@@ -16,7 +16,6 @@ const to = route.query.to ?? "";
 // 滚动到指定元素的方法
 const scrollToElement = (selector: string) => {
   const element = document.querySelector(selector);
-  console.log(element)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
