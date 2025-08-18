@@ -1,20 +1,33 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 const router = useRouter();
-// const route = useRoute();
+const route = useRoute();
+
+function goto(path: string) {
+    router.push(path);
+}
+const paths = [
+    { name: "Our Aims", icon: "icon-01 icon-aims", path: "/introduction" },
+    { name: "Pilot Studies", icon: "icon-01 icon-search", path: "/pilot" },
+    { name: "Our Plans", icon: "icon-01 icon-task", path: "/sos" }
+];
 </script>
 
 <template>
     <el-container>
         <el-header style="border-bottom: 1px solid #6A7794;">
             <div class="container">
-                <div style="grid-column: 1 / 5;">Mapping Human Morality</div>
+                <div style="grid-column: 1 / 5; cursor: pointer;" @click="goto('/')">Mapping Human Morality</div>
                 <div style="grid-column: 5 / 13;">
                     <ul class="nav">
-                        <li @click="router.push('/introduction')"><span class="icon icon-01 icon-aims"></span>Our Aims</li>
-                        <li @click="router.push('/pilot')"><span class="icon icon-01 icon-search"></span>Pilot Studies</li>
-                        <li @click="router.push('/sos')"><span class="icon icon-01 icon-task"></span>Our Plans</li>
+                        <template v-for="path in paths">
+                            <li @click="goto(path.path)" :class="{
+                                activate: path.path == route.path
+                            }">
+                                <span :class="`icon ${path.icon}`"></span>{{ path.name }}
+                            </li>
+                        </template>
                     </ul>
                 </div>
             </div>
@@ -33,6 +46,7 @@ const router = useRouter();
     grid-template-columns: repeat(12, 1fr);
     line-height: 60px;
     font-size: 14px;
+    user-select: none;
 }
 
 .container .nav {
@@ -45,6 +59,9 @@ const router = useRouter();
 
 .container .nav li {
     cursor: pointer;
+}
+.container .nav li.activate {
+    box-shadow: inset 0px -2px 1px #fff;
 }
 
 .container .nav .icon {
