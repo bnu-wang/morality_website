@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "iconfont 6dw8ad"; /* Project id  */
+  src: url('assets/fonts/iconfont_6dw8ad.ttf?t=1755307365351') format('truetype');
+}
+
+.icon-01 {
+  font-family: "iconfont 6dw8ad";
+  font-size: 160px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-task:before {
+  content: "\e65d";
+}
+
+.icon-search:before {
+  content: "\e8ef";
+}
+
+.icon-aims:before {
+  content: "\e503";
+}

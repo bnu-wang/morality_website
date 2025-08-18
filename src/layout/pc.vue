@@ -4,33 +4,17 @@
 
 <template>
     <el-container>
-        <el-header class="dark">
-            <el-menu
-                :router="true"
-                :ellipsis="false"
-                mode="horizontal">
-                <el-menu-item index="/">
-                    Mapping Human Morality
-                </el-menu-item>
-                <el-menu-item index="introduction">
-                    Introduction
-                </el-menu-item>
-                <el-sub-menu index="pilot">
-                    <template #title>Pilot Data</template>
-                    <el-menu-item index="pilot?to=study1">
-                        Study 1: Model structure
-                    </el-menu-item>
-                    <el-menu-item index="pilot?to=study2">
-                        Study 2: Cultural comparison
-                    </el-menu-item>
-                    <el-menu-item index="pilot?to=study3">
-                        Study 3: Historical evolution
-                    </el-menu-item>
-                </el-sub-menu>
-                <el-menu-item index="sos">
-                    Maps and Data
-                </el-menu-item>
-            </el-menu>
+        <el-header style="border-bottom: 1px solid #6A7794;">
+            <div class="container">
+                <div style="grid-column: 1 / 5;">Mapping Human Morality</div>
+                <div style="grid-column: 5 / 13;">
+                    <ul class="nav">
+                        <li><span class="icon icon-01 icon-aims"></span>Our Aims</li>
+                        <li><span class="icon icon-01 icon-search"></span>Pilot Studies</li>
+                        <li><span class="icon icon-01 icon-task"></span>Our Plans</li>
+                    </ul>
+                </div>
+            </div>
         </el-header>
         <el-main>
             <slot></slot>
@@ -39,11 +23,29 @@
 </template>
 
 <style scoped>
-:deep(.el-main) {
-    min-height: calc(100vh - 60px);
+.container {
+    display: grid;
+    max-width: 900px;
+    margin: auto;
+    grid-template-columns: repeat(12, 1fr);
+    line-height: 60px;
+    font-size: 14px;
 }
 
-.el-menu--horizontal > .el-menu-item:nth-child(1) {
-  margin-right: auto;
+.container .nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container .nav li {
+    cursor: pointer;
+}
+
+.container .nav .icon {
+    font-size: 16px;
+    margin: 0 10px 0 0;
 }
 </style>

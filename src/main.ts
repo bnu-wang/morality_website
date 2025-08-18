@@ -1,4 +1,5 @@
 import "./assets/css/reset.css";
+import "./assets/css/icons.css";
 
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
