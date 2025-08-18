@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useRoute, useRouter } from 'vue-router';
 
+const router = useRouter();
+const route = useRoute();
 </script>
 
 <template>
@@ -9,9 +12,9 @@
                 <div style="grid-column: 1 / 5;">Mapping Human Morality</div>
                 <div style="grid-column: 5 / 13;">
                     <ul class="nav">
-                        <li><span class="icon icon-01 icon-aims"></span>Our Aims</li>
-                        <li><span class="icon icon-01 icon-search"></span>Pilot Studies</li>
-                        <li><span class="icon icon-01 icon-task"></span>Our Plans</li>
+                        <li @click="router.push('/introduction')"><span class="icon icon-01 icon-aims"></span>Our Aims</li>
+                        <li @click="router.push('/pilot')"><span class="icon icon-01 icon-search"></span>Pilot Studies</li>
+                        <li @click="router.push('/sos')"><span class="icon icon-01 icon-task"></span>Our Plans</li>
                     </ul>
                 </div>
             </div>
