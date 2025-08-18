@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont 6dw8ad"; /* Project id  */
-  src: url('assets/fonts/iconfont_6dw8ad.ttf?t=1755307365351') format('truetype');
+  src: url('./assets/fonts/iconfont_6dw8ad.ttf?t=1755307365351') format('truetype');
 }
 
 .icon-01 {
