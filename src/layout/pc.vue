@@ -9,7 +9,7 @@ function goto(path: string) {
 }
 const paths = [
     { name: "Introduction", icon: "icon-01 icon-aims", path: "/introduction" },
-    { name: "Pilot Studies", icon: "icon-01 icon-search", path: "/study" },
+    { name: "Findings", icon: "icon-01 icon-search", path: "/study" },
     { name: "Future Plans", icon: "icon-01 icon-task", path: "/future" }
 ];
 </script>

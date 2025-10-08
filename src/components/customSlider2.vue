@@ -10,7 +10,7 @@
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 64px 30px 30px 64px;
+    padding: 20px 30px 30px 64px;
     background-color: rgba(79, 86, 255, 1);
     color: #fff;
     background-image: linear-gradient(rgba(255, 211, 175, 1), rgba(255, 211, 175, 1)),

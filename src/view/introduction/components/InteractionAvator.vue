@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
+
 const avators = [
-    { img: "./assets/image/2025100701.png", q: "Muhammad", a: "Trustworthiness" },
+    { img: "./assets/image/2025100701.png", q: "", a: "Trustworthiness" },
     { img: "./assets/image/2025100702.png", q: "Siddhartha Gautama", a: "Compassion" },
     { img: "./assets/image/2025100703.png", q: "Kant", a: "Deontology" },
     { img: "./assets/image/2025100704.png", q: "King", a: "Rights" },
@@ -12,6 +14,17 @@ const avators = [
     { img: "./assets/image/2025100710.jpg", q: "Beauvoir", a: "Equality" },
     { img: "./assets/image/2025100711.png", q: "Hume", a: "Emotion" },
 ].reverse();
+
+onMounted(() => {
+    const doms = document.querySelectorAll<HTMLDivElement>(".avator");
+    setInterval(() => {
+        doms.forEach((dom) => {
+            const v = parseFloat(dom.style.getPropertyValue("--i"));
+            const _v = v + 0.01;
+            dom.style.setProperty("--i", (_v < 10 ? _v : 0).toString());
+        });
+    }, 1000 / 30);
+});
 
 const click = (e: MouseEvent) => {
     const dom: HTMLDivElement | null = e.target as HTMLDivElement | null;
@@ -109,18 +122,8 @@ const click = (e: MouseEvent) => {
 .star_ring {
     transform-style: preserve-3d;
     transform: translateY(150px) perspective(1000px) rotateX(75deg);
-    animation: bg_animate 20s linear infinite;
 }
 .star_ring > div {
     transform-style: preserve-3d;
-}
-
-@keyframes bg_animate {
-    0% {
-        transform: translateY(150px) perspective(1000px) rotateX(75deg) rotateZ(0deg);
-    }
-    100% {
-        transform: translateY(150px) perspective(1000px) rotateX(75deg) rotateZ(360deg);
-    }
 }
 </style>

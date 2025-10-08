@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+import A1 from './a1.vue';
 
+const showDrawer = ref(false);
 </script>
 
 <template>
@@ -11,8 +14,13 @@
             <img :src="'./assets/image/2025100735.png'" alt="" srcset="">
             <img :src="'./assets/image/2025100736.png'" alt="" srcset="">
             <img :src="'./assets/image/2025100737.png'" alt="" srcset="">
-            <div class="more">Read more—</div>
+            <div class="more" @click="showDrawer = true">Read more—</div>
         </div>
+        <el-drawer v-model="showDrawer"
+                    direction="btt"
+                    size="80%">
+                    <A1></A1>
+        </el-drawer>
     </div>
 </template>
 

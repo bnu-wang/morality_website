@@ -130,6 +130,7 @@ onMounted(() => {
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 20px auto;
+    background-color: white;
 }
 
 .graph-box .graph { 
