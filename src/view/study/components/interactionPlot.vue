@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { newPlot } from 'plotly.js-dist';
-import { onMounted, reactive, ref, type Reactive } from 'vue';
+import { onMounted, reactive, type Reactive } from 'vue';
 
 import customSlider from '../../../components/customSlider2.vue';
 import selectInput from '../../../components/selectInput.vue';
