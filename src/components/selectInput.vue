@@ -55,5 +55,10 @@ const inputEnter = () => {
 :deep(.el-input__wrapper) {
     box-sizing: border-box;
     padding: 10px 20px;
+    background-color: white !important;
+    color: black !important
+}
+:deep(.el-input__inner) {
+    color: black !important
 }
 </style>

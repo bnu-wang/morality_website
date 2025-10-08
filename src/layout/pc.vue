@@ -8,9 +8,9 @@ function goto(path: string) {
     router.push(path);
 }
 const paths = [
-    { name: "Our Aims", icon: "icon-01 icon-aims", path: "/introduction" },
-    { name: "Pilot Studies", icon: "icon-01 icon-search", path: "/pilot" },
-    { name: "Our Plans", icon: "icon-01 icon-task", path: "/sos" }
+    { name: "Introduction", icon: "icon-01 icon-aims", path: "/introduction" },
+    { name: "Pilot Studies", icon: "icon-01 icon-search", path: "/study" },
+    { name: "Future Plans", icon: "icon-01 icon-task", path: "/future" }
 ];
 </script>
 

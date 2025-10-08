@@ -24,6 +24,16 @@ const router = createRouter({
       path: "/sos",
       name: "sos",
       component: () => import("../view/sos/index.vue")
+    },
+    {
+      path: "/future",
+      name: "future",
+      component: () => import("../view/future/index.vue")
+    },
+    {
+      path: "/study",
+      name: "study",
+      component: () => import("../view/study/index.vue")
     }
   ]
 });

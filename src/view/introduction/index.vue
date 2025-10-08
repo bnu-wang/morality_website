@@ -1,23 +1,19 @@
 <script setup lang="ts">
 import layout from "../../layout/default.vue";
-// import P1 from "./p1.vue";
-// import P2 from "./p2.vue";
-// import P3 from "./p3.vue";
-// import P4 from "./p4.vue";
-// import P5 from "./p5.vue";
-// import P6 from "./p6.vue";
-import P7 from "./p7.vue";
+import P10 from "./p10.vue";
+import P11 from "./p11.vue";
+import P12 from "./p12.vue";
+import P8 from "./p8.vue";
+import P9 from "./p9.vue";
 </script>
 
 <template>
     <layout>
-        <P7></P7>
-        <!-- <P5></P5>
-        <P1></P1>
-        <P2></P2>
-        <P3></P3>
-        <P4></P4>
-        <P6></P6> -->
+        <P8></P8>
+        <P9></P9>
+        <P10></P10>
+        <P11></P11>
+        <P12></P12>
     </layout>
 </template>
 

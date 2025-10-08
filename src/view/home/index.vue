@@ -31,18 +31,18 @@ const edges: Array<{
     target: NodeInfo;
     index: number
 }> = [
-    { source: 0, target: 1 },
-    { source: 0, target: 2 },
-    { source: 0, target: 3 },
-    { source: 1, target: 2 },
-    { source: 2, target: 3 },
-    { source: 4, target: 5 },
-    { source: 4, target: 6 },
-    { source: 5, target: 6 },
-    { source: 7, target: 8 },
-    { source: 7, target: 9 },
-    { source: 8, target: 9 },
-];
+        { source: 0, target: 1 },
+        { source: 0, target: 2 },
+        { source: 0, target: 3 },
+        { source: 1, target: 2 },
+        { source: 2, target: 3 },
+        { source: 4, target: 5 },
+        { source: 4, target: 6 },
+        { source: 5, target: 6 },
+        { source: 7, target: 8 },
+        { source: 7, target: 9 },
+        { source: 8, target: 9 },
+    ];
 
 let contine_f = true;
 function frame() {
@@ -122,7 +122,12 @@ function resize() {
 <template>
     <layout>
         <div class="container">
-            <div class="tips">Two things awe me most, the starry sky above me and the moral law within me.</div>
+            <div class="tips">
+                <div>
+                    <p>“Two things awe me most, the starry sky above me and the moral law within me.”</p>
+                    <p>——Kant</p>
+                </div>
+            </div>
             <canvas ref="dom"></canvas>
             <div style="grid-column: 1 / 7;">
                 <ElButton>WangLab</ElButton>

@@ -65,10 +65,8 @@ class Star {
 const isMobile = ref(false);
 const judgeDevice = () => {
     isMobile.value = window.innerWidth < 600;
-    const offset_top = (document.querySelector(".el-main") as HTMLDivElement ?? { offsetTop: 0}).offsetTop;
-    dom.value.width = layout.value.clientWidth;
-    dom.value.height = layout.value.clientHeight - offset_top;
-    dom.value.style.top = `${offset_top}px`;
+    dom.value.width = window.innerWidth;
+    dom.value.height = window.innerHeight;
 }
 
 let continue_f = true;
@@ -100,14 +98,10 @@ function frame(t: number) {
 }
 
 const dom = ref() as Ref<HTMLCanvasElement>;
-const layout = ref() as Ref<HTMLDivElement>;
 onMounted(() => {
     judgeDevice();
     window.addEventListener("resize", judgeDevice);
     init();
-    setTimeout(() => {
-        judgeDevice();
-    }, 100); // 避免bug
 });
 onUnmounted(() => {
     continue_f = false;
@@ -116,7 +110,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div ref="layout">
+    <div>
         <canvas ref="dom"></canvas>
         <component :is="isMobile ? PE : PC">
             <slot></slot>
@@ -127,9 +121,11 @@ onUnmounted(() => {
 <style scoped>
 canvas {
     display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
     z-index: -1;
+}
+
+:deep(.el-header) {
+    background-color: var(--el-bg-color);
 }
 </style>

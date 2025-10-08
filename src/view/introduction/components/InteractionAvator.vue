@@ -1,10 +1,16 @@
 <script setup lang="ts">
 const avators = [
-    { img: "./assets/image/2025032902.png", q: "Buddhism", a: "Compassion" },
-    { img: "./assets/image/2025032903.jpg", q: "Plato", a: "Justice" },
-    { img: "./assets/image/2025032904.png", q: "Confucianism", a: "Benevolence" },
-    { img: "./assets/image/2025032905.png", q: "Sartre", a: "Liberty" },
-    { img: "./assets/image/2025032906.png", q: "Kant", a: "Duty" }
+    { img: "./assets/image/2025100701.png", q: "Muhammad", a: "Trustworthiness" },
+    { img: "./assets/image/2025100702.png", q: "Siddhartha Gautama", a: "Compassion" },
+    { img: "./assets/image/2025100703.png", q: "Kant", a: "Deontology" },
+    { img: "./assets/image/2025100704.png", q: "King", a: "Rights" },
+    { img: "./assets/image/2025100705.png", q: "Moses", a: "Sanctity" },
+    { img: "./assets/image/2025100706.png", q: "Aquinas", a: "Intention" },
+    { img: "./assets/image/2025100707.png", q: "Jesus", a: "Love" },
+    { img: "./assets/image/2025100708.png", q: "Confucius", a: "Benevolence" },
+    { img: "./assets/image/2025100709.png", q: "Plato", a: "Justice" },
+    { img: "./assets/image/2025100710.jpg", q: "Beauvoir", a: "Equality" },
+    { img: "./assets/image/2025100711.png", q: "Hume", a: "Emotion" },
 ].reverse();
 
 const click = (e: MouseEvent) => {
@@ -15,14 +21,14 @@ const click = (e: MouseEvent) => {
 
 <template>
     <div class="interaction-avator">
-        <div class="text">
-            <p>Do you know what morality is in the eyes of philosophers and religious scriptures?</p>
-            <p>Click on the avatar to reveal the answer.</p>
+        <div class="star_ring">
+            <div class="ele" style="background-image: url('./assets/image/2025052903.png');"></div>
+            <div>
+                <template v-for="(item, index) in avators">
+                    <div class="avator" :style="`--i: ${index}; background-image: url(${item.img}); --q: '${item.q}'; --a: '${item.a}';`" @click.once="click"></div>
+                </template>
+            </div>
         </div>
-        <div class="ele" style="background-image: url('./assets/image/2025052903.png');"></div>
-        <template v-for="(item, index) in avators">
-            <div class="avator" :style="`--i: ${index}; background-image: url(${item.img}); --q: '${item.q}'; --a: '${item.a}';`" @click.once="click"></div>
-        </template>
     </div>
 </template>
 
@@ -36,19 +42,13 @@ const click = (e: MouseEvent) => {
     color: grey;
 }
 
-.interaction-avator .text {
-    display: block;
-    width: 55%;
-    font-size: 12px;
-}
-
 .ele {
     width: 198px;
     height: 198px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotateX(-75deg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -70,14 +70,15 @@ const click = (e: MouseEvent) => {
     position: absolute;
     top: 45%;
     left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) 
+               rotate(calc(-36deg * var(--i))) 
+               translate(-300px, 0px)
+               rotate(calc(36deg * var(--i)))
+               rotateX(-75deg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    transform-origin: center center;
-    transform: translate(-50%, -50%) 
-               rotate(calc(-60deg * var(--i))) 
-               translate(-160px, 0px)
-               rotate(calc(60deg * var(--i)));
     cursor: pointer;
 }
 .avator::before {
@@ -99,16 +100,27 @@ const click = (e: MouseEvent) => {
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;
-    color: black;
+    color: #fff;
 }
 .avator.activate::before {
     opacity: 1;
 }
 
-@media screen and (max-width: 400px) {
-    .interaction-avator {
-        transform-origin: 0 0;
-        transform: scale(0.8);
+.star_ring {
+    transform-style: preserve-3d;
+    transform: translateY(150px) perspective(1000px) rotateX(75deg);
+    animation: bg_animate 20s linear infinite;
+}
+.star_ring > div {
+    transform-style: preserve-3d;
+}
+
+@keyframes bg_animate {
+    0% {
+        transform: translateY(150px) perspective(1000px) rotateX(75deg) rotateZ(0deg);
+    }
+    100% {
+        transform: translateY(150px) perspective(1000px) rotateX(75deg) rotateZ(360deg);
     }
 }
 </style>
