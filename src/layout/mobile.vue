@@ -19,20 +19,20 @@ import { MoreFilled } from '@element-plus/icons-vue';
                                 <el-menu-item index="introduction">
                                     Introduction
                                 </el-menu-item>
-                                <el-sub-menu index="pilot">
-                                    <template #title>Pilot Data</template>
-                                    <el-menu-item index="pilot?to=study1">
+                                <el-sub-menu index="study">
+                                    <template #title>Findings</template>
+                                    <el-menu-item index="study?to=study1">
                                         Study 1: Model structure
                                     </el-menu-item>
-                                    <el-menu-item index="pilot?to=study2">
+                                    <el-menu-item index="study?to=study2">
                                         Study 2: Cultural comparison
                                     </el-menu-item>
-                                    <el-menu-item index="pilot?to=study3">
+                                    <el-menu-item index="study?to=study3">
                                         Study 3: Historical evolution
                                     </el-menu-item>
                                 </el-sub-menu>
-                                <el-menu-item index="sos">
-                                    Maps and Data
+                                <el-menu-item index="future">
+                                    Future Plans
                                 </el-menu-item>
                             </el-menu>
                         </template>

@@ -110,7 +110,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div>
+    <div style="width: 100%; height: 100%;">
         <canvas ref="dom"></canvas>
         <component :is="isMobile ? PE : PC">
             <slot></slot>

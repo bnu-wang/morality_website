@@ -2,7 +2,7 @@
 import { onMounted } from 'vue';
 
 const avators = [
-    { img: "./assets/image/2025100701.png", q: "", a: "Trustworthiness" },
+    { img: "./assets/image/2025100701.png", q: "Trustworthiness", a: "Trustworthiness" },
     { img: "./assets/image/2025100702.png", q: "Siddhartha Gautama", a: "Compassion" },
     { img: "./assets/image/2025100703.png", q: "Kant", a: "Deontology" },
     { img: "./assets/image/2025100704.png", q: "King", a: "Rights" },
@@ -11,7 +11,7 @@ const avators = [
     { img: "./assets/image/2025100707.png", q: "Jesus", a: "Love" },
     { img: "./assets/image/2025100708.png", q: "Confucius", a: "Benevolence" },
     { img: "./assets/image/2025100709.png", q: "Plato", a: "Justice" },
-    { img: "./assets/image/2025100710.jpg", q: "Beauvoir", a: "Equality" },
+    { img: "./assets/image/2025100710.png", q: "Beauvoir", a: "Equality" },
     { img: "./assets/image/2025100711.png", q: "Hume", a: "Emotion" },
 ].reverse();
 
@@ -21,7 +21,7 @@ onMounted(() => {
         doms.forEach((dom) => {
             const v = parseFloat(dom.style.getPropertyValue("--i"));
             const _v = v + 0.01;
-            dom.style.setProperty("--i", (_v < 10 ? _v : 0).toString());
+            dom.style.setProperty("--i", (_v * 32 < 360 ? _v : 0).toString());
         });
     }, 1000 / 30);
 });
@@ -85,9 +85,9 @@ const click = (e: MouseEvent) => {
     left: 50%;
     transform-origin: center center;
     transform: translate(-50%, -50%) 
-               rotate(calc(-36deg * var(--i))) 
+               rotate(calc(-32deg * var(--i))) 
                translate(-300px, 0px)
-               rotate(calc(36deg * var(--i)))
+               rotate(calc(32deg * var(--i)))
                rotateX(-75deg);
     background-size: contain;
     background-repeat: no-repeat;

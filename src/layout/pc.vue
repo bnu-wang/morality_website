@@ -61,11 +61,16 @@ const paths = [
     cursor: pointer;
 }
 .container .nav li.activate {
-    box-shadow: inset 0px -2px 1px #fff;
+    box-shadow: inset 0px -2px 0px #fff;
 }
 
 .container .nav .icon {
     font-size: 16px;
     margin: 0 10px 0 0;
+}
+
+.el-container {
+    width: 100%;
+    height: 100%;
 }
 </style>
