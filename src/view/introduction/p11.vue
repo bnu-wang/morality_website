@@ -5,7 +5,9 @@
 <template>
     <div class="container">
         <div class="a">
-            <div class="icon" style="--url: url(./assets/image/2025100715.png)"></div>
+            <div class="icon">
+                <img :src="'./assets/image/2025100715.png'" alt="">
+            </div>
             <h1><strong>Our opinion: </strong><br />Universal coordinates space, Culturally-tuned weights</h1>
         </div>
         <div class="b">
@@ -49,6 +51,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     vertical-align: middle;
+}
+.a .icon img {
+    width: 100%;
 }
 .a h1 {
     display: inline-block;
