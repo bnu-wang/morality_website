@@ -50,38 +50,38 @@
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 20px;
+    font-size: 22px;
+    line-height: 1.5em;
 }
 
 .title {
-    grid-column: 2 / 12;
+    grid-column: 1 / 13;
     text-align: center;
 }
 
 .lt {
-    grid-column: 2 / 7;
-    font-size: 16px;
-    line-height: 28px;
+    grid-column: 1 / 7;
     text-align: justify;
 }
 
 .rt {
-    grid-column: 7 / 12;
+    grid-column: 8 / 13;
 }
 
 .lb {
-    grid-column: 1 / 6;
+    grid-column: 1 / 7;
 }
 
 .mb {
-    grid-column: 6 / 9;
-    font-size: 16px;
-    line-height: 24px;
+    grid-column: 7 / 10;
+    font-size: 18px;
+    line-height: 1.5em;
     text-align: justify;
 }
 
 .rb {
-    grid-column: 9 / 12;
+    grid-column: 10 / 13;
     position: relative;
 }
 

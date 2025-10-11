@@ -40,4 +40,9 @@ import InteractionAvator from './components/InteractionAvator.vue';
 .desc {
     grid-column: 2 / 12;
 }
+
+.title, .desc {
+    font-size: 24px;
+    line-height: 1.5em;
+}
 </style>

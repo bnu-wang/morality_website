@@ -34,12 +34,12 @@
     text-align: center;
 }
 .b {
-    grid-column: 5 / 9;
+    grid-column: 2 / 12;
 }
 
 .w {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 24px;
+    line-height: 1.5em;
 }
 
 img {

@@ -28,7 +28,7 @@
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 70px;
 }
 
 .title {
@@ -39,7 +39,10 @@
     grid-column: 2 / 8;
 }
 .r {
-    grid-column: 8 / 12;
+    grid-column: 8 / 13;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .w {

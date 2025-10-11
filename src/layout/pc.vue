@@ -18,7 +18,7 @@ const paths = [
     <el-container>
         <el-header style="border-bottom: 1px solid #6A7794;">
             <div class="container">
-                <div style="grid-column: 1 / 5; cursor: pointer;" @click="goto('/')">Mapping Human Morality</div>
+                <div style="grid-column: 1 / 5; cursor: pointer; font-size: 24px;" @click="goto('/')"><strong>Mapping Human Morality</strong></div>
                 <div style="grid-column: 5 / 13;">
                     <ul class="nav">
                         <template v-for="path in paths">
@@ -41,7 +41,7 @@ const paths = [
 <style scoped>
 .container {
     display: grid;
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
     grid-template-columns: repeat(12, 1fr);
     line-height: 60px;
@@ -51,7 +51,7 @@ const paths = [
 
 .container .nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
     padding: 0;
     margin: 0;

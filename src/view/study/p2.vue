@@ -5,7 +5,7 @@
 <template>
     <div class="container">
         <div class="title">
-            <h2>Materials: A comprehensive sample of moral actions</h2>
+            <h1>Materials: A comprehensive sample of moral actions</h1>
         </div>
         <div class="a">
             <img :src="'./assets/image/2025100732.png'" alt="" srcset="">
@@ -22,10 +22,11 @@
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
+    font-size: 22px;
 }
 
 .title, .a {
-    grid-column: 3 / 11;
+    grid-column: 1 / 13;
 }
 .a img {
     width: 100%;

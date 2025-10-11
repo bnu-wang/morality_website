@@ -5,7 +5,7 @@
 <template>
     <div class="container">
         <div class="title">
-            <h2>Human use the SIS model to navigate the moral space.</h2>
+            <h1>Human use the SIS model to navigate the moral space.</h1>
         </div>
         <div class="a">
             <img :src="'./assets/image/2025100731.png'" alt="" srcset="">
@@ -20,11 +20,12 @@
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
+    font-size: 24px;
 }
 
 .title, .a {
     display: block;
-    grid-column: 3 / 11;
+    grid-column: 1 / 13;
     text-align: center;
 }
 .a img {

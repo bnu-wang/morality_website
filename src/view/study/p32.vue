@@ -31,22 +31,20 @@
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 70px;
+    font-size: 24px;
+    line-height: 1.5em;
 }
 
 .title {
-    grid-column: 2 / 12;
+    grid-column: 1 / 13;
     text-align: center;
 }
 .left {
-    grid-column: 2 / 7;
-    font-size: 20px;
-    line-height: 28px;
+    grid-column: 1 / 7;
 }
 .right {
-    grid-column: 7 / 12;
-    font-size: 20px;
-    line-height: 28px;
+    grid-column: 7 / 13;
 }
 
 img {

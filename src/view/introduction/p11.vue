@@ -6,7 +6,7 @@
     <div class="container">
         <div class="a">
             <div class="icon" style="--url: url(./assets/image/2025100715.png)"></div>
-            <h1><strong>Our opinion: </strong><br />Universal coordinates space, <br />Culturally-tuned weights</h1>
+            <h1><strong>Our opinion: </strong><br />Universal coordinates space, Culturally-tuned weights</h1>
         </div>
         <div class="b">
             <p>We hypothesize that human communities share a common conceptual scaffold for morality, but locate specific moral actions differently within that scaffold.</p>
@@ -29,7 +29,7 @@
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 40px;
 }
 
 .a, .b, .c {
@@ -56,9 +56,6 @@
     font-size: 36px;
     line-height: 48px;
     vertical-align: middle;
-}
-.a h1 strong {
-    font-size: 64px;
 }
 
 .b p {

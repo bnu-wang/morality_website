@@ -81,8 +81,8 @@ onMounted(() => {
 <template>
     <div style="margin: 0 auto;">
         <custom-slider>
-            <h2>Interactive plot</h2>
-            <p style="text-align: justify;">Hover the mouse over the circle to explore all 100 evil and 100 good actions and their positions in the SIS space. Zoom in on an area with the mouse by framing it (and double click the enlarged area to restore to the original size).</p>
+            <p class="a" style="font-weight: bold; margin: 0 0 10px 0;">Interactive plot</p>
+            <p class="a" style="font-size: 11px; text-align: justify;">Hover the mouse over the circle to explore all 100 evil and 100 good actions and their positions in the SIS space. Zoom in on an area with the mouse by framing it (and double click the enlarged area to restore to the original size).</p>
             <div class="select-input-box">
                 <select-input title="Select your evil action of interest" 
                               :items="data.harm.words"
@@ -110,10 +110,14 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.a {
+    margin: 0;
+}
+
 .select-input-box {
     display: flex;
     justify-content: space-around;
-    margin: 20px auto;
+    margin: 5px auto;
 }
 
 .select-input-box .select-input-component {
@@ -146,22 +150,5 @@ onMounted(() => {
 }
 .legend img {
     width: 100%;
-}
-
-@media screen and (max-width: 1200px) {
-    .graph .plotly {
-        width: 360px;
-        height: 360px;
-        transform-origin: top left;
-        transform: scale(0.8);
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .graph .plotly {
-        width: 270px;
-        height: 270px;
-        transform: scale(0.6);
-    }
 }
 </style>

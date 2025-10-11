@@ -44,6 +44,7 @@
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
+    font-size: 24px;
 }
 
 .title {

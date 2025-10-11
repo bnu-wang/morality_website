@@ -49,12 +49,12 @@ const inputEnter = () => {
 
 <style lang="css" scoped>
 .title {
-    margin: 20px 0px;
+    margin: 5px 0px;
 }
 
 :deep(.el-input__wrapper) {
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 0px 10px;
     background-color: white !important;
     color: black !important
 }

@@ -45,19 +45,20 @@ const showDrawer2 = ref(false);
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 70px;
+    font-size: 22px;
 }
 
 .title {
     display: block;
-    grid-column: 3 / 11;
+    grid-column: 1 / 13;
     text-align: center;
 }
 .a {
     grid-column: 1 / 7;
 }
 .b {
-    grid-column: 8 / 13;
+    grid-column: 7 / 13;
 }
 
 img {

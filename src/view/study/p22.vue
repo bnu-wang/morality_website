@@ -20,10 +20,11 @@
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
+    font-size: 22px;
 }
 
 .title, .m {
-    grid-column: 2 / 12;
+    grid-column: 1 / 13;
     text-align: center;
 }
 
