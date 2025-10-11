@@ -45,7 +45,9 @@ const click = (e: Person) => {
             <div class="list">
                 <template v-for="item in l" :key="item.name">
                     <div class="m-box" style="background-color: #008080;" @click="click(item)">
-                        <div class="avatar" :style="`--url: url(./assets/image/${item.avatar})`"></div>
+                        <div class="avatar">
+                            <img :src="`./assets/image/${item.avatar}`" alt="" srcset="">
+                        </div>
                         <div class="t-box">
                             <div class="t">{{ item.name }}</div>
                             <div class="d">{{ item.desc }}</div>
@@ -69,7 +71,9 @@ const click = (e: Person) => {
             <div class="list">
                 <template v-for="item in r" :key="item.name">
                     <div class="m-box" style="background-color: #FF7F50;" @click="click(item)">
-                        <div class="avatar" :style="`--url: url(./assets/image/${item.avatar})`"></div>
+                        <div class="avatar">
+                            <img :src="`./assets/image/${item.avatar}`" alt="" srcset="">
+                        </div>
                         <div class="t-box">
                             <div class="t">{{ item.name }}</div>
                             <div class="d">{{ item.desc }}</div>
@@ -134,12 +138,15 @@ const click = (e: Person) => {
     width: 64px;
     height: 64px;
     margin: 0 15px 0 0;
-    background-image: var(--url);
+    /* background-image: var(--url);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     border-radius: 50%;
     vertical-align: middle;
+}
+.m-box .avatar img {
+    width: 100%;
 }
 .m-box .t-box {
     display: inline-block;
