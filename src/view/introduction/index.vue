@@ -21,4 +21,9 @@ import P9 from "./p9.vue";
 :deep(.para) {
     margin-bottom: 1rem;
 }
+
+:deep(.container) {
+    min-height: 100%;
+    scroll-snap-align: start;
+}
 </style>

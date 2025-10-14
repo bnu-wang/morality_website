@@ -73,4 +73,7 @@ const paths = [
     width: 100%;
     height: 100%;
 }
+.el-main {
+    scroll-snap-type: y mandatory;
+}
 </style>

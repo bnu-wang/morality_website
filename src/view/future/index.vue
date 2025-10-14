@@ -14,5 +14,8 @@ import P3 from "./p3.vue";
 </template>
 
 <style lang="css" scoped>
-
+:deep(.container) {
+    min-height: 100%;
+    scroll-snap-align: start;
+}
 </style>

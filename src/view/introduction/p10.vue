@@ -91,7 +91,7 @@ const click = (e: Person) => {
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 100px;
 }
 
 .title {

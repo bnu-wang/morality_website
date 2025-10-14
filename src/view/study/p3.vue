@@ -31,7 +31,7 @@ const showDrawer = ref(false);
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .title {

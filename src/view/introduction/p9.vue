@@ -5,7 +5,7 @@
 <template>
     <div class="container">
         <div class="top-left">
-            <p style="font-size: 24px; line-height: 1em; text-align: center;">Papers since 1899  (n = 59,381)</p>
+            <p style="font-size: 24px; line-height: 1em; text-align: center; font-style: oblique;">Papers since 1899  (n = 59,381)</p>
             <img :src="'./assets/image/2025100713.png'" alt="">
         </div>
         <div class="top-right">
