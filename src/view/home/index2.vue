@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import layout from "../../layout/default.vue";
 import { ElButton } from "element-plus";
-import GitStar from "./components/GitStar.vue";
+import StarGit from "./components/StarGit.vue";
 
 </script>
 
@@ -9,7 +9,7 @@ import GitStar from "./components/GitStar.vue";
     <layout>
         <div class="container">
             <div class="bg">
-                <GitStar></GitStar>
+                <StarGit></StarGit>
             </div>
             <div style="position: fixed; z-index: 2;">
                 <div class="tips">

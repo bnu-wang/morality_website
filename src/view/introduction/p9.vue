@@ -5,7 +5,7 @@
 <template>
     <div class="container">
         <div class="top-left">
-            <p style="font-size: 24px; line-height: 1em; text-align: center; font-style: oblique;">Papers since 1899  (n = 59,381)</p>
+            <p>Papers since 1899  (n = 59,381)</p>
             <img :src="'./assets/image/2025100713.png'" alt="">
         </div>
         <div class="top-right">
@@ -24,7 +24,9 @@
                 <li>
                     <p>Economics investigates trust, fairness, and cooperation in decision-making at both micro- and macro level</p>
                 </li>
-                <li style="list-style: none;"><p>…….</p></li>
+                <li style="list-style: none;">
+                    <p style="margin: 0;">…….</p>
+                </li>
             </ul>
         </div>
         <div class="desc">
@@ -42,15 +44,17 @@
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 20px;
+    font-family: "PingFang SC";
     font-size: 20px;
+    line-height: 1.4em;
 }
 
 .top-left {
     grid-column: 1 / 5;
 }
 .top-right {
-    grid-column: 6 / 13;
+    grid-column: 5 / 13;
 }
 .desc {
     grid-column: 1 / 13;
@@ -58,6 +62,10 @@
 .img {
     grid-column: 1 / 13;
 }
+
+.top-left p { font-size: 22px; font-style: italic; }
+.top-right ul { padding-inline-start: 1em; }
+.top-right ul p { margin: 20px 0 0 0; }
 
 img {
     width: 100%;

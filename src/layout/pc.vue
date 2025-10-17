@@ -18,8 +18,8 @@ const paths = [
     <el-container>
         <el-header style="border-bottom: 1px solid #6A7794;">
             <div class="container">
-                <div style="grid-column: 1 / 5; cursor: pointer; font-size: 24px;" @click="goto('/')"><strong>Mapping Human Morality</strong></div>
-                <div style="grid-column: 5 / 13;">
+                <div style="grid-column: 1 / 7;"><strong  style="cursor: pointer; font-size: 24px;" @click="goto('/')">Mapping Human Morality</strong></div>
+                <div style="grid-column: 7 / 13;">
                     <ul class="nav">
                         <template v-for="path in paths">
                             <li @click="goto(path.path)" :class="{

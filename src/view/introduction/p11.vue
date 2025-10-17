@@ -32,39 +32,45 @@
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 100px;
+    font-family: "PingFang SC";
 }
 
-.a, .b {
-    grid-column: span 6;
-}
+.a { grid-column: 1 / 8; }
+.b { grid-column: 8 / 13; }
 .c {
     grid-column: 1 / 13;
+    margin: 40px 0;
 }
 .d, .e {
     grid-column: span 6;
     text-align: justify;
     margin: 0 0 50px 0;
+    font-size: 26px;
+    line-height: 1.5em;
 }
 
 .a h1 {
     display: inline-block;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 48px;
     vertical-align: middle;
+}
+.a h1 strong {
+    font-size: 50px;
 }
 .a p {
     padding: 35px;
     border: solid 1px #fff;
     border-radius: 25px;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 30px;
+    line-height: 45px;
 }
 .b .icon {
-    display: inline-block;
+    display: flex;
     width: 100%;
     height: 100%;
+    align-items: center;
     box-sizing: border-box;
-    padding: 64px;
 }
 .b .icon img {
     width: 100%;

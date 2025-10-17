@@ -129,11 +129,11 @@
     border-radius: 50%;
 }
 .rb .icon.ip1 {
-    bottom: 47%;
+    bottom: 52%;
     left: 62.5%;
 }
 .rb .icon.ip2 {
-    bottom: 25%;
+    bottom: 31%;
     left: 43%;
 }
 .ip1:hover +.p2 {

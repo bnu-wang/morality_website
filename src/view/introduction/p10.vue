@@ -41,7 +41,7 @@ const click = (e: Person) => {
             <h1>Current debate: universalism vs diversity</h1>
         </div>
         <div class="left">
-            <h2 style="color: #008080;">Proponents for universalism</h2>
+            <h2 style="color: #008080; text-align: left; line-height: 40px;">Proponents for<br>universalism</h2>
             <div class="list">
                 <template v-for="item in l" :key="item.name">
                     <div class="m-box" style="background-color: #008080;" @click="click(item)">
@@ -57,17 +57,17 @@ const click = (e: Person) => {
             </div>
         </div>
         <div class="mid">
-            <h2>{{ curr.author ? curr.author : "who" }}'s viewpoint</h2>
+            <h1>{{ curr.author ? curr.author : "who" }}'s viewpoint</h1>
+            <div style="text-decoration: underline; font-size: 20px;">Click on the debater you're interested in to view their viewpoints.</div>
             <div class="show">
                 <el-avatar :size="128" :src="curr.avator">
                     <img src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" alt=""></img>
                 </el-avatar>
                 <p style="text-align: justify; font-size: 18px; line-height: 32px;">{{ curr.word }}</p>
             </div>
-            <div style="text-decoration: underline;">Click on the debater you're interested in to view their viewpoints.</div>
         </div>
         <div class="right">
-            <h2 style="color: #FF7F50;">Proponents for diversity</h2>
+            <h2 style="color: #FF7F50; text-align: right; line-height: 40px;">Proponents for <br>diversity</h2>
             <div class="list">
                 <template v-for="item in r" :key="item.name">
                     <div class="m-box" style="background-color: #FF7F50;" @click="click(item)">
@@ -91,7 +91,8 @@ const click = (e: Person) => {
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 100px;
+    grid-column-gap: 20px;
+    font-family: "Pingpong SC";
 }
 
 .title {
@@ -116,6 +117,7 @@ const click = (e: Person) => {
     margin: auto;
     flex-direction: column;
     justify-content: space-around;
+    text-align: center;
 }
 .mid .show {
     flex-grow: 1;
@@ -129,14 +131,20 @@ const click = (e: Person) => {
 }
 
 .m-box {
-    padding: 16px;
+    display: flex;
+    width: 100%;
+    height: 117px;
+    justify-content: center;
+    align-items: center;
     margin: 25px 0;
     border-radius: 15px;
+    user-select: none;
+    cursor: pointer;
 }
 .m-box .avatar {
     display: inline-block;
-    width: 64px;
-    height: 64px;
+    width: 74px;
+    height: 74px;
     margin: 0 15px 0 0;
     /* background-image: var(--url);
     background-size: contain;
@@ -150,7 +158,7 @@ const click = (e: Person) => {
 }
 .m-box .t-box {
     display: inline-block;
-    width: calc(100% - 80px);
+    width: calc(100% - 128px);
     vertical-align: middle;
 }
 .m-box .t-box .t {
@@ -158,6 +166,7 @@ const click = (e: Person) => {
     line-height: 48px;
 }
 .m-box .t-box .d {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.5em;
 }
 </style>
