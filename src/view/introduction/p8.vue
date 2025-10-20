@@ -45,4 +45,10 @@ import InteractionAvator from './components/InteractionAvator.vue';
     font-size: 24px;
     line-height: 1.5em;
 }
+
+p {
+    font-size: 28px;
+    line-height: 1.5em;
+    font-weight: 300;
+}
 </style>

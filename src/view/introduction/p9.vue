@@ -48,6 +48,7 @@
     font-family: "PingFang SC";
     font-size: 20px;
     line-height: 1.4em;
+    font-weight: 300;
 }
 
 .top-left {

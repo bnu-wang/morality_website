@@ -159,26 +159,62 @@ starNewData.forEach(item => {
   item.posX = item.posX - 699;
   item.posY = item.posY - 264;
 });
-
+const starNewSharingData = [
+    { color: "#7F1416", posX: 1003, posY: 307 },
+    { color: "#7F1416", posX: 888, posY: 323 },
+    { color: "#7F1416", posX: 804, posY: 379 },
+    { color: "#7F1416", posX: 822, posY: 435 },
+    { color: "#7F1416", posX: 798, posY: 546 },
+    { color: "#7F1416", posX: 796, posY: 611 },
+    { color: "#7F1416", posX: 906, posY: 618 },
+    { color: "#7F1416", posX: 897, posY: 529 },
+    { color: "#7F1416", posX: 959, posY: 451 },
+    { color: "#7F1416", posX: 993, posY: 556 },
+    { color: "#066D31", posX: 1115, posY: 274 },
+    { color: "#066D31", posX: 1220, posY: 288 },
+    { color: "#066D31", posX: 1290, posY: 412 },
+    { color: "#066D31", posX: 1289, posY: 517 },
+    { color: "#066D31", posX: 1159, posY: 395 },
+    { color: "#066D31", posX: 1131, posY: 461 },
+    { color: "#066D31", posX: 1144, posY: 523 },
+    { color: "#066D31", posX: 1207, posY: 596 },
+    { color: "#066D31", posX: 1139, posY: 661 },
+    { color: "#066D31", posX: 1248, posY: 661 },
+];
+starNewSharingData.forEach(item => {
+  item.posX = item.posX - 699;
+  item.posY = item.posY - 264;
+});
 class Star {
+    private r: number;
     private init_step = 0.1;
     private step = this.init_step;
     constructor(
         private x: number, 
         private y: number, 
         private color: string,
-        private word: string,
-        private r: number,
+        private word: string | undefined,
+        private r_min: number,
+        private r_max: number,
         private angle: number,
-    ) {}
+    ) {
+        this.r = Math.random() * (this.r_max - this.r_min) + this.r_min;
+    }
+
+    public get pos() {
+        return {
+            x: this.x,
+            y: this.y
+        }
+    }
 
     public update({x, y}: {x: number, y: number}) {
         this.r += this.step;
-        if (this.r >= 10) this.step = -1 * this.init_step;
-        if (this.r <= 5) {
+        if (this.r >= this.r_max) this.step = -1 * this.init_step;
+        if (this.r <= this.r_min) {
             this.x = x;
             this.y = y;
-            this.r = 5;
+            this.r = this.r_min;
             this.step = this.init_step;
         }
     }
@@ -209,21 +245,22 @@ class Star {
             } else {
                 ctx.lineTo(outerX, outerY);
             }
-            
             ctx.lineTo(innerX, innerY);
         }
 
         ctx.closePath();
         ctx.fill();
 
-        ctx.font = `16px Arial`;
-        ctx.fillStyle = "#ffffff";
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(this.word, 0, 0);
+        if (this.word) {
+            ctx.font = `16px Arial`;
+            ctx.fillStyle = "#ffffff";
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(this.word, 0, 0);
+        }
 
         ctx.restore();
     }
 }
 
-export { starData, starNewData, starConnectData, Star };
+export { starData, starNewData, starConnectData, starNewSharingData, Star };

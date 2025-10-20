@@ -76,6 +76,16 @@ const click = (e: MouseEvent) => {
     font-size: 72px;
     font-weight: 700;
 }
+.ele::before {
+    content: "Click on the puzzle to reveal the answer.";
+    position: absolute;
+    top: -20%;
+    left: -50%;
+    font-size: 22px;
+    font-weight: 300;
+    color: white;
+    width: 410px;
+}
 
 .avator {
     width: 96px;

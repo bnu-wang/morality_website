@@ -31,14 +31,18 @@
             </p>
         </div>
         <div class="rb">
-            <img :src="'./assets/image/2025100803.png'" alt="" srcset="">
-            <div class="icon ip2"></div>
-            <div class="s p1">
-                <img :src="'./assets/image/2025100816.png'" alt="">
-            </div>
-            <div class="icon ip1"></div>
-            <div class="s p2">
-                <img :src="'./assets/image/2025100817.png'" alt="">
+            <div>
+                <div>
+                    <img :src="'./assets/image/2025100803.png'" alt="" srcset=""></img>
+                </div>
+                <div class="icon ip2"></div>
+                <div class="s p1">
+                    <img :src="'./assets/image/2025100816.png'" alt="">
+                </div>
+                <div class="icon ip1"></div>
+                <div class="s p2">
+                    <img :src="'./assets/image/2025100817.png'" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -82,6 +86,8 @@
 
 .rb {
     grid-column: 10 / 13;
+}
+.rb > div {
     position: relative;
 }
 
@@ -129,11 +135,11 @@
     border-radius: 50%;
 }
 .rb .icon.ip1 {
-    bottom: 52%;
+    bottom: 48%;
     left: 62.5%;
 }
 .rb .icon.ip2 {
-    bottom: 31%;
+    bottom: 26%;
     left: 43%;
 }
 .ip1:hover +.p2 {

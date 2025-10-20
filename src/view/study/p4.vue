@@ -61,6 +61,10 @@ const showDrawer2 = ref(false);
     grid-column: 7 / 13;
 }
 
+.b-box .el-button {
+    background-color: rgba(79, 86, 255, 1);
+}
+
 img {
     width: 100%;
 }

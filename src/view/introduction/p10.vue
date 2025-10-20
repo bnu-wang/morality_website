@@ -93,6 +93,7 @@ const click = (e: Person) => {
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
     font-family: "Pingpong SC";
+    font-weight: 300;
 }
 
 .title {

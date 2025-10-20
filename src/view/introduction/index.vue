@@ -23,7 +23,7 @@ import P9 from "./p9.vue";
 }
 
 :deep(.container) {
-    min-height: 100%;
+    min-height: calc(100% + 20px);
     scroll-snap-align: start;
 }
 </style>

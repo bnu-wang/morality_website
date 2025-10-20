@@ -27,7 +27,7 @@ import P4 from "./p4.vue";
 
 <style lang="css" scoped>
 :deep(.container) {
-    min-height: 100%;
+    min-height: calc(100% + 20px);
     scroll-snap-align: start;
 }
 </style>

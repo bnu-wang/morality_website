@@ -33,6 +33,7 @@
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 100px;
     font-family: "PingFang SC";
+    font-weight: 300;
 }
 
 .a { grid-column: 1 / 8; }
@@ -59,7 +60,7 @@
     font-size: 50px;
 }
 .a p {
-    padding: 35px;
+    padding: 12px;
     border: solid 1px #fff;
     border-radius: 25px;
     font-size: 30px;

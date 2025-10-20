@@ -5,27 +5,35 @@ import StarNew from "./components/StarNew.vue";
 
 <template>
     <layout>
-        <div class="container">
-            <div class="a">
-                <p class="w">“Two things awe me most, the starry sky above me and the moral law within me.”</p>
-                <p class="r">——Kant</p>
-            </div>
-            <div class="b">
-                <StarNew></StarNew>
-            </div>
-            <div class="c">
-                <img :src="'./assets/image/2025101501.png'" alt="" srcset="">
-            </div>
-            <div class="d">
-                <ElButton>WangLab</ElButton>
-                <ElButton>YuLab</ElButton>
-                <ElButton>HuLab</ElButton>
+        <div class="cb">
+            <div class="container">
+                <div class="a">
+                    <p class="w">“Two things awe me most, the starry sky above me and the moral law within me.”</p>
+                    <p class="r">——Kant</p>
+                </div>
+                <div class="b">
+                    <StarNew></StarNew>
+                </div>
+                <div class="c">
+                    <img :src="'./assets/image/2025101501.png'" alt="" srcset="">
+                </div>
+                <div class="d">
+                    <ElButton>WangLab</ElButton>
+                    <ElButton>YuLab</ElButton>
+                    <ElButton>HuLab</ElButton>
+                </div>
             </div>
         </div>
     </layout>
 </template>
 
 <style lang="css" scoped>
+.cb {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 .container {
     display: grid;
     max-width: 1200px;

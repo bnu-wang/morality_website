@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue';
-import { Star, starConnectData, starNewData } from './data';
+import { Star, starConnectData, starNewData, starNewSharingData } from './data';
 
 const dom = ref<HTMLCanvasElement>();
 
@@ -11,7 +11,17 @@ starNewData.forEach(item => {
         item.posY, 
         item.color,
         item.word,
-        Math.random() * 10, 0
+        4, 15, 0
+    );
+    stars.push(instance);
+});
+starNewSharingData.forEach(item => {
+    const instance = new Star(
+        item.posX, 
+        item.posY, 
+        item.color,
+        undefined,
+        0, 10, 0
     );
     stars.push(instance);
 });
@@ -38,11 +48,11 @@ function init() {
             ctx.closePath();
             ctx.stroke();
         });
-        stars.forEach((item, i) => {
+        stars.forEach((item) => {
             item.draw(ctx);
             item.update({
-                x: starNewData[i].posX,
-                y: starNewData[i].posY
+                x: item.pos.x,
+                y: item.pos.y
             });
         });
     }
