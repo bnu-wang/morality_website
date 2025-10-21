@@ -9,7 +9,7 @@
                 <h1>Future plan on contemporary exploration</h1>
             </div>
             <div class="a">
-                <img :src="'./assets/image/2025100717.png'" alt="" srcset="">
+                <img :src="'./assets/image/2025102104.png'" alt="" srcset="">
             </div>
             <div class="b">
                 <p class="title">18 Global Countries (<span style="color: #FF7F50;">n = 10,800</span>)</p>
@@ -23,7 +23,7 @@
                     from a multinational database covering cultural, economic, and ecological domains.</p>
             </div>
             <div class="d">
-                <img :src="'./assets/image/2025100718.png'" alt="">
+                <img :src="'./assets/image/2025102105.png'" alt="">
             </div>
         </div>
     </div>
@@ -43,7 +43,9 @@
     grid-column: 1 / 13;
 }
 .title > h1 {
+    font-size: 40px;
     line-height: 1.5em;
+    text-align: center;
 }
 .a,
 .b {

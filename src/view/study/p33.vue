@@ -9,18 +9,14 @@
         </div>
         <div class="lt">
             <p>
-                We compared ancient and modern Chinese moral views by analyzing how much each dimension contributed to
-                the overall moral framework in each period. Ancient Chinese emphasized "care for others" and
-                "self-control," reflecting Confucian virtues like Ren (benevolence) and Li (propriety). In contrast,
-                modern Chinese prioritizes "sacrifice," underscoring the importance of collectivism and national
-                interests in today's society.
+                We compared ancient and modern Chinese moral views by analyzing how much each dimension contributed to the overall moral framework in each period. Ancient Chinese emphasized "care for others" and “harm to others," reflecting Confucian virtues like Ren (benevolence). In contrast, modern Chinese prioritizes societal level, underscoring the importance of collectivism and national interests in today's society.
             </p>
         </div>
         <div class="rt">
-            <img :src="'./assets/image/2025100801.png'" alt="" srcset="">
+            <img :src="'./assets/image/2025102106.png'" alt="" srcset="">
         </div>
         <div class="lb">
-            <img :src="'./assets/image/2025100802.png'" alt="" srcset="">
+            <img :src="'./assets/image/2025102107.png'" alt="" srcset="">
         </div>
         <div class="mb">
             <p>We’ll employ a more <strong>refined hybrid retrieval method</strong> to track the evolution of ideas
@@ -75,6 +71,7 @@
 
 .lb {
     grid-column: 1 / 7;
+    margin: 0 20px 0 0;
 }
 
 .mb {

@@ -4,11 +4,7 @@
 
 <template>
     <div class="container">
-        <div class="top-left">
-            <p>Papers since 1899  (n = 59,381)</p>
-            <img :src="'./assets/image/2025100713.png'" alt="">
-        </div>
-        <div class="top-right">
+        <div class="left">
             <h1>Multidisciplinary concern</h1>
             <p>Beyond the insights of humanities, modern scientific disciplines are also deeply interested in morality.</p>
             <ul>
@@ -22,18 +18,26 @@
                     <p>Neuroscience studies its biological basis in the brain. </p>
                 </li>
                 <li>
-                    <p>Economics investigates trust, fairness, and cooperation in decision-making at both micro- and macro level</p>
+                    <p>Economics investigates trust, fairness, and cooperation in decision-making at both micro- and
+                        macro level</p>
                 </li>
                 <li style="list-style: none;">
                     <p style="margin: 0;">…….</p>
                 </li>
             </ul>
+            <div class="img">
+                <img :src="'./assets/image/2025100713.png'" alt="">
+                <p>Papers since 1899<br />(n = 59,381)</p>
+            </div>
+            <div class="desc">
+                <p>We integrate theories from various disciplines and classical viewpoints of religious philosophy,
+                summarizing the key characteristics of important moral concepts, which represent various domains,
+                including behavioral outcomes, normative principles, social interactions, agent perception, and moral
+                emotions.</p>
+            </div>
         </div>
-        <div class="desc">
-            <p>We integrate theories from various disciplines and classical viewpoints of religious philosophy, summarizing the key characteristics of important moral concepts, which represent various domains, including behavioral outcomes, normative principles, social interactions, agent perception, and moral emotions.</p>
-        </div>
-        <div class="img">
-            <img :src="'./assets/image/2025100712.png'" alt="">
+        <div class="right">
+            <img :src="'./assets/image/2025102101.png'" alt="">
         </div>
     </div>
 </template>
@@ -47,26 +51,27 @@
     grid-column-gap: 20px;
     font-family: "PingFang SC";
     font-size: 20px;
-    line-height: 1.4em;
+    line-height: 1.5em;
     font-weight: 300;
 }
 
-.top-left {
-    grid-column: 1 / 5;
+.left {
+    grid-column: 1 / 8;
 }
-.top-right {
-    grid-column: 5 / 13;
-}
-.desc {
-    grid-column: 1 / 13;
-}
-.img {
-    grid-column: 1 / 13;
+.right {
+    display: flex;
+    align-items: center;
+    grid-column: 8 / 13;
 }
 
-.top-left p { font-size: 22px; font-style: italic; }
-.top-right ul { padding-inline-start: 1em; }
-.top-right ul p { margin: 20px 0 0 0; }
+.left .img img { width: 60%; }
+.left .img p { width: 35%; text-align: center; font-size: 22px; font-weight: 700; font-style: italic; }
+.left .img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 img {
     width: 100%;

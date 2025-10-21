@@ -8,7 +8,7 @@
             <h2>PCA loadings in China</h2>
         </div>
         <div class="m">
-            <p class="w">⭐ PCA loadings on 54 features for evil and good actions in the China.</p>
+            <p class="w">⭐ PCA loadings on 60 features for evil and good actions in the China.</p>
         </div>
         <div class="b">
             <img :src="'./assets/image/2025100815.png'" alt="" srcset="">
