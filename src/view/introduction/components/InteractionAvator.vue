@@ -2,7 +2,7 @@
 import { onMounted } from 'vue';
 
 const avators = [
-    { img: "./assets/image/2025100701.png", q: "Trustworthiness", a: "Trustworthiness" },
+    { img: "./assets/image/2025100701.png", q: "Muhammad", a: "Trustworthiness" },
     { img: "./assets/image/2025100702.png", q: "Siddhartha Gautama", a: "Compassion" },
     { img: "./assets/image/2025100703.png", q: "Kant", a: "Deontology" },
     { img: "./assets/image/2025100704.png", q: "King", a: "Rights" },
@@ -77,7 +77,7 @@ const click = (e: MouseEvent) => {
     font-weight: 700;
 }
 .ele::before {
-    content: "Click on the puzzle to reveal the answer.";
+    content: "Click on the avatar to reveal the answer.";
     position: absolute;
     top: -20%;
     left: -50%;

@@ -17,11 +17,6 @@ import StarNew from "./components/StarNew.vue";
                 <div class="c">
                     <img :src="'./assets/image/2025101501.png'" alt="" srcset="">
                 </div>
-                <div class="d">
-                    <ElButton>WangLab</ElButton>
-                    <ElButton>YuLab</ElButton>
-                    <ElButton>HuLab</ElButton>
-                </div>
             </div>
         </div>
     </layout>
