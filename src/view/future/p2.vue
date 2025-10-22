@@ -48,6 +48,10 @@
     grid-column: 1 / 13;
     text-align: center;
 }
+.title h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
 
 .left {
     grid-column: 2 / 6;

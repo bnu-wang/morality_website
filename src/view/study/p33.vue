@@ -40,6 +40,7 @@
                     <img :src="'./assets/image/2025100817.png'" alt="">
                 </div>
             </div>
+            <p style="font-size: 16px; text-align: center; margin: 0; font-weight: 100;">Hover over the dot to see the details.</p>
         </div>
     </div>
 </template>

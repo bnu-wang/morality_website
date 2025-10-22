@@ -22,8 +22,8 @@ const selectAction = (item: any) => {
     if (type === "harm") {
         if (data.harm.data[0].text.length === data.harm.words.length) {
             data.harm.data[0].marker.size.push(20);
-            data.harm.data[0].marker.color.push("rgba(255,255,255,1)");
-            data.harm.data[0].marker.line.color.push("rgba(255,255,255,1)");
+            data.harm.data[0].marker.color.push("rgba(255,0,0,1)");
+            data.harm.data[0].marker.line.color.push("rgba(255,0,0,1)");
             data.harm.data[0].x.push(data.harm.data[0].x[index]);
             data.harm.data[0].y.push(data.harm.data[0].y[index]);
             data.harm.data[0].text.push(data.harm.data[0].text[index]);
@@ -37,8 +37,8 @@ const selectAction = (item: any) => {
     } else if (type === "sacrifice") {
         if (data.sacrifice.data[0].text.length === data.sacrifice.words.length) {
             data.sacrifice.data[0].marker.size.push(20);
-            data.sacrifice.data[0].marker.color.push("rgba(255,255,255,1)");
-            data.sacrifice.data[0].marker.line.color.push("rgba(255,255,255,1)");
+            data.sacrifice.data[0].marker.color.push("rgba(255,0,0,1)");
+            data.sacrifice.data[0].marker.line.color.push("rgba(255,0,0,1)");
             data.sacrifice.data[0].x.push(data.sacrifice.data[0].x[index]);
             data.sacrifice.data[0].y.push(data.sacrifice.data[0].y[index]);
             data.sacrifice.data[0].text.push(data.sacrifice.data[0].text[index]);
@@ -82,7 +82,7 @@ onMounted(() => {
     <div style="margin: 0 auto;">
         <custom-slider>
             <p class="a" style="font-weight: bold; margin: 0 0 10px 0;">Interactive plot</p>
-            <p class="a" style="font-size: 11px; text-align: justify;">Hover the mouse over the circle to explore all 100 evil and 100 good actions and their positions in the SIS space. Zoom in on an area with the mouse by framing it (and double click the enlarged area to restore to the original size).</p>
+            <p class="a" style="font-size: 18px; text-align: justify;">Hover the mouse over the circle to explore all 100 evil and 100 good actions and their positions in the SIS space.</p>
             <div class="select-input-box">
                 <select-input title="Select your evil action of interest" 
                               :items="data.harm.words"

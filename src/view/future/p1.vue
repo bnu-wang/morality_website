@@ -60,6 +60,10 @@
     grid-column: 7 / 13;
 }
 
+.c, .d {
+    margin: 80px 0 0 0;
+}
+
 .a img,
 .d img {
     width: 100%;
@@ -67,6 +71,7 @@
 
 .b .title,
 .c .title {
+    margin: 0;
     font-size: 32px;
     line-height: 48px;
     font-weight: 700;

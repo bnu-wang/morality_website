@@ -14,7 +14,7 @@ const showDrawer2 = ref(false);
             <h2>Study1: Initial validation of the Societal-Interpersonal-Self (SIS) model</h2>
         </div>
         <div class="a">
-            <p>A large-scale survey (n = 1,415) asked U.S. participants to rate a wide range of good and evil actions. </p>
+            <p style="word-break: break-all;">A large-scale survey (n = 1,415) asked U.S. participants to rate a wide range of good and evil actions. </p>
             <img :src="'./assets/image/2025100738.png'" alt="" srcset="">
             <p>Using <strong>principal component analysis (PCA)</strong>, we identified three key dimensions for each moral domain. </p>
             <InteractionPlot></InteractionPlot>
@@ -61,6 +61,9 @@ const showDrawer2 = ref(false);
     grid-column: 7 / 13;
 }
 
+.b-box {
+    text-align: center;
+}
 .b-box .el-button {
     background-color: rgba(79, 86, 255, 1);
 }

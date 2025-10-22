@@ -9,9 +9,9 @@ type Person = {
 }
 
 const l: Array<Person> = [
-    { name: "Plato", avatar: "2025101101.png", desc: "Greek philosopher. Founded Academy Advanced theory of forms", viewpoint: "This, then, which imparts truth to the known and the power of knowing to the knower, is what I would have you term the idea of good" },
+    { name: "Plato", avatar: "2025101101.png", desc: "Greek philosopher. Founded Academy Advanced theory of forms.", viewpoint: "This, then, which imparts truth to the known and the power of knowing to the knower, is what I would have you term the idea of good." },
     { name: "Kant", avatar: "2025101102.png", desc: "German philosopher. Developed deontological ethics, categorical imperative.", viewpoint: "Act only according to that maxim whereby you can at the same time will that it should become a universal law." },
-    { name: "Darwin", avatar: "2025101103.png", desc: "English naturalist. Proposed evolution by natural selection", viewpoint: "Any animal whatever, endowed with well-marked social instincts, would inevitably acquire a moral sense or conscience, as soon as its intellectual powers had become as well, or nearly as well developed, as in man." },
+    { name: "Darwin", avatar: "2025101103.png", desc: "English naturalist. Proposed evolution by natural selection.", viewpoint: "Any animal whatever, endowed with well-marked social instincts, would inevitably acquire a moral sense or conscience, as soon as its intellectual powers had become as well, or nearly as well developed, as in man." },
     { name: "Piaget", avatar: "2025101104.png", desc: "Swiss psychologist. Pioneered cognitive developmental stage theory.", viewpoint: "The rule of justice is a sort of immanent condition of social relationships or a law governing their equilibrium." },
     { name: "Kohlberg", avatar: "2025101105.png", desc: "American psychologist. Proposed stages of moral development.", viewpoint: "At heart, these are universal principles of justice, of the reciprocity and equality of human rights, and of respect for the dignity of human beings as individual persons." },
 ];
@@ -19,14 +19,14 @@ const r: Array<Person> = [
     { name: "Mead", avatar: "2025101106.png", desc: "American anthropologist. Studied culture and personality development.", viewpoint: "We are forced to conclude that human nature is almost unbelievably malleable, responding accurately and contrastingly to contrasting cultural conditions." },
     { name: "Malinowski", avatar: "2025101107.png", desc: "Polish anthropologist. Founded functionalism in cultural anthropology.", viewpoint: "The natives have a word, yotile, which means ‘a good man,’ but its primary meaning is ‘generous’... Another word, nogila, means ‘a bad man,’ and its primary meaning is ‘stingy." },
     { name: "Shweder", avatar: "2025101108.png", desc: "American anthropologist.  Advanced cultural psychology and moral diversity.", viewpoint: "There are at least three major types of moral discourse in the world, which are unevenly distributed in the various cultural traditions. " },
-    { name: "Haidt", avatar: "2025101109.png", desc: "American psychologist. Developed moral foundations theory.", viewpoint: "Cultures can all talk about ‘sweetness,’ but they can create different desserts. Likewise, many societies can talk about justice, but they can build different just societies" },
+    { name: "Haidt", avatar: "2025101109.png", desc: "American psychologist. Developed moral foundations theory.", viewpoint: "Cultures can all talk about ‘sweetness,’ but they can create different desserts. Likewise, many societies can talk about justice, but they can build different just societies." },
     { name: "Henrich", avatar: "2025101110.png", desc: "Canadian anthropologist.  Studied cultural evolution and non-WEIRD psychology.", viewpoint: "The degree of fairness and willingness to punish unfairness varied dramatically across societies... For example, among the Lamalera of Indonesia, who are whale hunters in large cooperative crews, hyper-fair offers in the Ultimatum Game were common... In contrast, the Machiguenga of the Amazon... showed little concern for fairness." },
 ];
 
 const curr = reactive({
     author: "",
     avator: "https://empty",
-    word: "please select"
+    word: ""
 })
 const click = (e: Person) => {
     curr.avator = `./assets/image/${e.avatar}`;
@@ -91,6 +91,7 @@ const click = (e: Person) => {
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: min-content;
     grid-column-gap: 20px;
     font-family: "Pingpong SC";
     font-weight: 300;

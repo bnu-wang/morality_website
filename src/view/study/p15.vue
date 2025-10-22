@@ -70,4 +70,7 @@
 img {
     width: 100%;
 }
+.a img {
+    width: calc(100% + 5px);
+}
 </style>
