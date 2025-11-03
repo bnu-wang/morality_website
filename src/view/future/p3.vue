@@ -36,6 +36,12 @@
     text-align: center;
 }
 
+.title h1 {
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 700;
+}
+
 .img,
 .desc {
     grid-column: 1 / 13;
@@ -46,7 +52,8 @@
 }
 
 .desc p {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 30px;
+    line-height: 42px;
+    padding: 20px 60px;
 }
 </style>

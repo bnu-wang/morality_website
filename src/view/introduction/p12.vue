@@ -113,6 +113,11 @@
     grid-row: 10 / 14;
 }
 
+.title h1 {
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 700;
+}
 .b p, .i p {
     text-align: center;
     font-size: 30px;
@@ -133,6 +138,7 @@
     font-size: 30px;
     line-height: 1.5em;
     font-weight: 700;
+    text-decoration: underline;
 }
 .f-n {
     font-size: 28px;

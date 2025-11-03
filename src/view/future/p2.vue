@@ -9,24 +9,26 @@
                 <h1>Future plan on ancient exploration</h1>
             </div>
             <div class="left">
-                <p>Besides Ancient China, we plan to <span style="color: #FF7F50; font-weight: 700;">"revive the mind of
-                        Medieval Europe"</span> using the same method (PLMs & LLMs).</p>
+                <p>Besides Ancient China, we plan to <br />
+                    <span style="color: #FF7F50; font-weight: 700;">"revive the mind of Medieval Europe"</span><br />
+                    using the same method <br />
+                    (PLMs & LLMs).</p>
                 <img :src="'./assets/image/2025100719.png'" alt="" srcset="">
             </div>
             <div class="right">
-                <p class="u s">How to extract moral actions and their descriptions?</p>
-                <p>Classical Latin literature + 2 Human Experts</p>
-                <p>Philosophy of the Elite + Theological works</p>
+                <p class="tt">How to extract moral actions and their descriptions?</p>
                 <img :src="'./assets/image/2025100720.png'" alt="" srcset="">
-                <p class="u s">How to obtain the representation?</p>
+                <p class="tt1 f2 s">Philosophy of the Elite <br/>(Summa Confessorum)</p>
+                <p class="tt1 f2 s">Theological works <br/>(The Pilgrim’s Progress)</p>
+                <p class="tt">How to obtain the representation?</p>
                 <ul>
                     <li>
-                        <p class="s">large language models (LLMs): </p>
-                        <p class="i">Volk et al. (2024) LLM-based Machine Translation and Summarization for Latin. </p>
+                        <p class="f1 s">large language models (LLMs): </p>
+                        <p class="f2 i">Volk et al. (2024) LLM-based Machine Translation and Summarization for Latin. </p>
                     </li>
                     <li>
-                        <p class="s">pre-trained language models (PLMs): </p>
-                        <p class="i">LatinBERT: https://github.com/dbamman/latin-bert</p>
+                        <p class="f1 s">pre-trained language models (PLMs): </p>
+                        <p class="f2 i">LatinBERT: https://github.com/dbamman/latin-bert</p>
                     </li>
                 </ul>
             </div>
@@ -41,7 +43,7 @@
     margin: 0 auto;
     grid-template-rows: min-content;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 5px;
 }
 
 .title {
@@ -49,12 +51,13 @@
     text-align: center;
 }
 .title h1 {
-    font-size: 50px;
+    font-size: 40px;
+    line-height: 56px;
     font-weight: 700;
 }
 
 .left {
-    grid-column: 2 / 6;
+    grid-column: 1 / 7;
 }
 
 .right {
@@ -62,16 +65,42 @@
 }
 
 .left p {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: 700;
+}
+.right .tt1 {
+    display: inline-block;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.right ul li p {
+    padding: 0;
+    margin: 0;
 }
 
 img {
     width: 100%;
 }
+.left img {
+    width: 75%;
+}
 
-.u {
-    text-decoration: underline;
+.tt {
+    font-size: 30px;
+    line-height: 42px;
+    padding: 0;
+    margin: 20px 0;
+}
+.f1 {
+    font-size: 24px;
+    line-height: 1.4em;
+}
+.f2 {
+    font-size: 20px;
+    line-height: 1.4em;
 }
 
 .s {

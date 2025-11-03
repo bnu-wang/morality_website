@@ -31,6 +31,5 @@ import P33 from "./p33.vue";
 <style lang="css" scoped>
 :deep(.container) {
     min-height: calc(100% + 20px);
-    scroll-snap-align: start;
 }
 </style>

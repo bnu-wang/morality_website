@@ -41,7 +41,7 @@ const click = (e: Person) => {
             <h1>Current debate: universalism vs diversity</h1>
         </div>
         <div class="left">
-            <h2 style="color: #008080; text-align: left; line-height: 40px;">Proponents for<br>universalism</h2>
+            <h2 style="color: #008080; text-align: left;">Proponents for<br>universalism</h2>
             <div class="list">
                 <template v-for="item in l" :key="item.name">
                     <div class="m-box" style="background-color: #008080;" @click="click(item)">
@@ -58,16 +58,18 @@ const click = (e: Person) => {
         </div>
         <div class="mid">
             <h1>{{ curr.author ? curr.author : "who" }}'s viewpoint</h1>
-            <div style="text-decoration: underline; font-size: 20px;">Click on the debater you're interested in to view their viewpoints.</div>
+            <div style="text-decoration: underline; font-size: 20px; color: #fdd912;">Click on the debater you're
+                interested in
+                to view their viewpoints.</div>
             <div class="show">
-                <el-avatar :size="128" :src="curr.avator">
+                <el-avatar :size="154" :src="curr.avator">
                     <img src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" alt=""></img>
                 </el-avatar>
-                <p style="text-align: justify; font-size: 18px; line-height: 32px;">{{ curr.word }}</p>
+                <p>{{ curr.word }}</p>
             </div>
         </div>
         <div class="right">
-            <h2 style="color: #FF7F50; text-align: right; line-height: 40px;">Proponents for <br>diversity</h2>
+            <h2 style="color: #FF7F50; text-align: right;">Proponents for <br>diversity</h2>
             <div class="list">
                 <template v-for="item in r" :key="item.name">
                     <div class="m-box" style="background-color: #FF7F50;" @click="click(item)">
@@ -93,43 +95,70 @@ const click = (e: Person) => {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: min-content;
     grid-column-gap: 20px;
-    font-family: "Pingpong SC";
-    font-weight: 300;
 }
 
 .title {
     grid-column: 1 / 13;
-    text-align: center;
-    font-size: 24px;
-    line-height: 1.5em;
 }
+
 .left {
     grid-column: 1 / 5;
 }
+
 .mid {
     grid-column: 5 / 9;
 }
+
 .right {
     grid-column: 9 / 13;
 }
 
-.mid {
-    display: flex;
-    height: 90%;
-    margin: auto;
-    flex-direction: column;
-    justify-content: space-around;
+.title h1 {
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 700;
     text-align: center;
 }
+
+.left h2,
+.right h2 {
+    font-size: 32px;
+    line-height: 45px;
+    font-weight: 700;
+}
+
+.mid {
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.mid h1 {
+    font-size: 32px;
+    line-height: 45px;
+    font-weight: 700;
+}
+
 .mid .show {
-    flex-grow: 1;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
     margin: 25px 0;
     padding: 15px;
     box-sizing: content-box;
     background-color: #3C4C68;
     border-radius: 35px;
     text-align: center;
+}
+
+.mid .show p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 500;
+    padding: 0 20px;
 }
 
 .m-box {
@@ -143,32 +172,33 @@ const click = (e: Person) => {
     user-select: none;
     cursor: pointer;
 }
+
 .m-box .avatar {
     display: inline-block;
     width: 74px;
-    height: 74px;
     margin: 0 15px 0 0;
-    /* background-image: var(--url);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; */
     border-radius: 50%;
     vertical-align: middle;
 }
+
 .m-box .avatar img {
     width: 100%;
 }
+
 .m-box .t-box {
     display: inline-block;
     width: calc(100% - 128px);
     vertical-align: middle;
 }
+
 .m-box .t-box .t {
     font-size: 32px;
-    line-height: 48px;
+    line-height: 45px;
+    font-weight: 700;
 }
+
 .m-box .t-box .d {
     font-size: 14px;
-    line-height: 1.5em;
+    line-height: 20px;
 }
 </style>

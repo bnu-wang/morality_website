@@ -38,11 +38,29 @@ import InteractionAvator from './components/InteractionAvator.vue';
     grid-column: 1 / 13;
 }
 .desc {
-    grid-column: 2 / 12;
+    grid-column: 1 / 13;
 }
 
-.title, .desc {
-    font-size: 24px;
+.title h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5em;
+}
+.title p {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5em;
+}
+.desc {
+    padding: 20px 85px;
+    background-image: url("/assets/image/2025102901.png");
+    background-repeat: no-repeat;
+    background-size: covers;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: left;
     line-height: 1.5em;
 }
 

@@ -18,7 +18,6 @@ import P3 from "./p3.vue";
     display: flex;
     align-items: center;
     width: 100%;
-    min-height: 100%;
-    scroll-snap-align: start;
+    min-height: 100%; 
 }
 </style>

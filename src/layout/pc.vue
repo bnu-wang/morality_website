@@ -18,8 +18,8 @@ const paths = [
     <el-container>
         <el-header style="border-bottom: 1px solid #6A7794;">
             <div class="container">
-                <div style="grid-column: 1 / 7;"><strong  style="cursor: pointer; font-size: 24px;" @click="goto('/')">Mapping Human Morality</strong></div>
-                <div style="grid-column: 7 / 13;">
+                <div class="title"><strong @click="goto('/')">Mapping Human Morality</strong></div>
+                <div class="taps">
                     <ul class="nav">
                         <template v-for="path in paths">
                             <li @click="goto(path.path)" :class="{
@@ -44,8 +44,6 @@ const paths = [
     max-width: 1200px;
     margin: auto;
     grid-template-columns: repeat(12, 1fr);
-    line-height: 60px;
-    font-size: 14px;
     user-select: none;
 }
 
@@ -56,8 +54,22 @@ const paths = [
     padding: 0;
     margin: 0;
 }
+.container .title {
+    grid-column: 1 / 7;
+    font-size: 24px;
+    line-height: 80px;
+    font-weight: 500;
+}
+.container .taps {
+    grid-column: 7 / 13;
+}
 
+.container .title strong {
+    cursor: pointer;
+}
 .container .nav li {
+    font-size: 18px;
+    line-height: 80px;
     cursor: pointer;
 }
 .container .nav li.activate {
@@ -65,15 +77,14 @@ const paths = [
 }
 
 .container .nav .icon {
-    font-size: 16px;
+    font-size: 30px;
     margin: 0 10px 0 0;
+    vertical-align: middle;
 }
 
+.el-header { height: 80px; }
 .el-container {
     width: 100%;
     height: 100%;
-}
-.el-main {
-    scroll-snap-type: y mandatory;
 }
 </style>
