@@ -155,7 +155,7 @@ const click = (e: Person) => {
 
 .mid .show p {
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 38px;
     font-weight: 500;
     padding: 0 20px;

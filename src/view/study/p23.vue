@@ -4,20 +4,18 @@
 
 <template>
     <div class="container">
-        <div class="h">
-            <p>
+        
+        <div class="h" style="font-size: 24px;">
+            <h2 style="text-align: center;font-weight: 400;font-size: 1.5em;">
                 Cultural Comparisons between the United States and China
-            </p>
+            </h2>
         </div>
         <div class="a">
             <img :src="'./assets/image/2025102111.png'" alt="" srcset="">
         </div>
         <div class="b">
             <p>
-                We found that people in the United States and China focus on different things when judging what is wrong or ugly.
-            </p>
-            <p>
-                Americans care more about how actions affect other people, while Chinese people pay more attention to how actions affect society and themselves. However, when it comes to judging what is right or beautiful, people in both countries have more similar views—except that Chinese people see acts of dedication as especially beautiful.
+                We found that people in the United States and China focus on different things when judging what is wrong or ugly. Americans care more about how actions affect other people, while Chinese people pay more attention to how actions affect society and themselves. However, when it comes to judging what is right or beautiful, people in both countries have more similar views—except that Chinese people see acts of dedication as especially beautiful.
             </p>
         </div>
         <div class="c">
