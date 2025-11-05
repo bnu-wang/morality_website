@@ -111,7 +111,7 @@ const click = (e: MouseEvent) => {
     background-color: #d9d9d9;
     text-align: center;
     color: black;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.5em;
     border-radius: 5px;
     opacity: 0;
