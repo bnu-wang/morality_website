@@ -47,18 +47,19 @@
 .f { grid-column: 7 / 13; grid-row: 6 / 7; }
 
 .t p {
-    font-size: 38px;
+    font-size: 40px;
     font-weight: 700;
+    text-align: center;
 }
 .c p {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 300;
     line-height: 1.5em;
 }
 .f p {
     margin: 0 0 0 15px;
     text-align: justify;
-    font-size: 21px;
+    font-size: 26px;
     font-weight: 300;
     line-height: 1.5em;
 }

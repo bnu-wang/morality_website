@@ -51,9 +51,10 @@ const showDrawer = ref(false);
 }
 .a .more {
     position: absolute;
-    bottom: 43%;
-    right: 12%;
+    bottom: 39%;
+    right: 4%;
     text-decoration: underline;
     cursor: pointer;
+    opacity: 0;
 }
 </style>

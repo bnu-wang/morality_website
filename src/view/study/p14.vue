@@ -77,6 +77,11 @@ const showDrawer2 = ref(false);
 }
 .b-box .el-button {
     background-color: rgba(79, 86, 255, 1);
+    min-width: 258px;
+}
+
+.b-box .el-button:first-child {
+    margin-left: -6%;
 }
 
 img {
