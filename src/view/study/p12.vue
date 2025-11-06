@@ -8,7 +8,7 @@
             <h1>Materials: A comprehensive sample of moral actions</h1>
         </div>
         <div class="a">
-            <img :src="'./assets/image/2025102102.png'" alt="" srcset="">
+            <img :src="'./assets/image/2025102102new.png'" alt="" srcset="">
         </div>
     </div>
 </template>
