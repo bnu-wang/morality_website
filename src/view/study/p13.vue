@@ -34,6 +34,11 @@ const showDrawer = ref(false);
 
 .title {
     grid-column: 1 / 13;
+    text-align: center;
+}
+
+.title h1 {
+    font-weight: bold;
 }
 .a {
     grid-column: 1 / 13;

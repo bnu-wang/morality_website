@@ -26,6 +26,14 @@
 .title, .a {
     grid-column: 1 / 13;
 }
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-weight: bold;
+}
 .a img {
     width: 100%;
     margin: 15px 0;

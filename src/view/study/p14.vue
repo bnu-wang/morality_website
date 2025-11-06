@@ -54,6 +54,10 @@ const showDrawer2 = ref(false);
     grid-column: 1 / 13;
     text-align: center;
 }
+
+.title h2 {
+    font-weight: bold;
+}
 .a {
     grid-column: 1 / 7;
 }
