@@ -8,10 +8,7 @@
             <p>Geometric symmetry between the <span style="color: #C00000;">Evil</span> and <span style="color: #027D33;">Good</span></p>
         </div>
         <div class="a">
-            <img :src="'./assets/image/2025102108.png'" alt="" srcset="">
-        </div>
-        <div class="b">
-            <img :src="'./assets/image/2025102109.png'" alt="" srcset="">
+            <img :src="'./assets/image/2025102108new.png'" alt="" srcset="">
         </div>
         <div class="c">
             <p>
@@ -22,7 +19,7 @@
             <p>Link between <span style="font-style: italic;">up-stream</span> and <span style="font-style: italic;">down-stream</span></p>
         </div>
         <div class="e">
-            <img :src="'./assets/image/2025102110.png'" alt="" srcset="">
+            <img :src="'./assets/image/2025102110new.png'" alt="" srcset="">
         </div>
         <div class="f">
             <p>
@@ -44,11 +41,10 @@
 }
 
 .t { grid-column: 1 / 13; }
-.a { grid-column: 1 / 9; grid-row: 2 / 3; }
-.b { grid-column: 9 / 13; grid-row: 2 / 4; }
-.c { grid-column: 1 / 9; grid-row: 3 / 4; }
-.e { grid-column: 1 / 10; grid-row: 6 / 7; }
-.f { grid-column: 10 / 13; grid-row: 6 / 7; }
+.a { grid-column: 1 / 13; grid-row: 2 / 3; }
+.c { grid-column: 1 / 13; grid-row: 3 / 4; }
+.e { grid-column: 1 / 7; grid-row: 6 / 7; }
+.f { grid-column: 7 / 13; grid-row: 6 / 7; }
 
 .t p {
     font-size: 38px;
@@ -71,6 +67,9 @@ img {
     width: 100%;
 }
 .a img {
-    width: calc(100% + 5px);
+    width: 100%;
+}
+.e img {
+    width: 100%;
 }
 </style>
