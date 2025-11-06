@@ -45,7 +45,7 @@
     line-height: 80px;
     text-align: center;
     font-weight: 700;
-    margin-top: -80px;
+    margin-top: -1%;
 }
 
 .b {
