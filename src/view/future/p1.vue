@@ -39,13 +39,14 @@
 
 .title {
     grid-column: 1 / 13;
+    margin-bottom: 20px;
 }
 .title > h1 {
     font-size: 40px;
-    line-height: 80px;
+    line-height: 1.5em;
     text-align: center;
     font-weight: 700;
-    margin-top: -6%;
+    margin-top: -30px;
 }
 
 .b {
