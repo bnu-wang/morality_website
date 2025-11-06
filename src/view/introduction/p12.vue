@@ -65,7 +65,10 @@
             <p>
                 AI Safety
             </p>
-            <img :src="'./assets/image/2025101704.png'" alt="">
+            <div class="i-imgs">
+                <img :src="'./assets/image/2025101704_left.png'" alt="" class="i-img-left">
+                <img :src="'./assets/image/2025101704_right.png'" alt="" class="i-img-right">
+            </div>
         </div>
     </div>
 </template>
@@ -155,5 +158,27 @@
 
 img {
     width: 100%;
+}
+
+.i-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.i-img-left{
+    width: 152px;
+    height: 143px;
+    object-fit: contain;
+    top: 1032px;
+    left: 1101px;
+}
+.i-img-right {
+    width: 274px;
+    height: 211px;
+    object-fit: contain;
+    top: 1003px;
+    left: 1196px;
 }
 </style>
