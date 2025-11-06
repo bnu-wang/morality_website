@@ -28,6 +28,10 @@
     grid-column: 1 / 13;
     text-align: center;
 }
+
+.title h1 {
+    font-weight: bold;
+}
 .a img {
     width: 85%;
 }
