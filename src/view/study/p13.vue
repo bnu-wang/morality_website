@@ -11,7 +11,7 @@ const showDrawer = ref(false);
             <h1>Materials: A comprehensive set of morally relevant features</h1>
         </div>
         <div class="a">
-            <img :src="'./assets/image/2025102103.png'" alt="" srcset="">
+            <img :src="'./assets/image/2025102103new.png'" alt="" srcset="">
             <div class="more" @click="showDrawer = true">Read more—</div>
         </div>
         <el-drawer v-model="showDrawer"
