@@ -42,9 +42,10 @@
 }
 .title > h1 {
     font-size: 40px;
-    line-height: 56px;
+    line-height: 80px;
     text-align: center;
     font-weight: 700;
+    margin-top: -80px;
 }
 
 .b {
@@ -66,9 +67,13 @@
     margin: 80px 0 0 0;
 }
 
-.a img,
+.a img {
+    width: 100%;
+}
+
 .d img {
     width: 100%;
+    margin-left: 50px;
 }
 
 .b .title,
