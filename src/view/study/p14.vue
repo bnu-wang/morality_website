@@ -61,6 +61,13 @@ const showDrawer2 = ref(false);
     grid-column: 7 / 13;
 }
 
+.b img {
+    max-height: 918px;
+    margin-top: 24px;
+    width: auto;
+    object-fit: contain;
+}
+
 .b-box {
     text-align: center;
 }
