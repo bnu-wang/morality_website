@@ -12,7 +12,7 @@
         </div>
         <div class="c">
             <p>
-                By identifying 52 pairs of actions that are highly symmetric—meaning they involve similar situations but opposite moral values—we found that each good action’s score on a moral dimension (like caring for others) was strongly linked to its evil counterpart (like harming others) on the matching dimension, but not on the other axes. 
+                By identifying several pairs of actions that are highly symmetric—meaning they involve similar situations but opposite moral values—we found that each good action’s score on a moral dimension (like caring for others) was strongly linked to its evil counterpart (like harming others) on the matching dimension, but not on the other axes. 
             </p>
         </div>
         <div class="t">
