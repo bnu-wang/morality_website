@@ -54,6 +54,10 @@ const showDrawer2 = ref(false);
     grid-column: 1 / 13;
     text-align: center;
 }
+
+.title h2 {
+    font-weight: bold;
+}
 .a {
     grid-column: 1 / 7;
 }
@@ -61,11 +65,23 @@ const showDrawer2 = ref(false);
     grid-column: 7 / 13;
 }
 
+.b img {
+    max-height: 918px;
+    margin-top: 24px;
+    width: auto;
+    object-fit: contain;
+}
+
 .b-box {
     text-align: center;
 }
 .b-box .el-button {
     background-color: rgba(79, 86, 255, 1);
+    min-width: 258px;
+}
+
+.b-box .el-button:first-child {
+    margin-left: -6%;
 }
 
 img {

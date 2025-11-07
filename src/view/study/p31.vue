@@ -31,6 +31,11 @@
     grid-column: 1 / 13;
     text-align: center;
 }
+
+.title h2 {
+    font-weight: bold;
+    font-size: 42px;
+}
 .m {
     grid-column: 1 / 13;
     line-height: 1.5em;
