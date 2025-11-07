@@ -10,7 +10,7 @@
             </div>
             <div class="left">
                 <p>Besides Ancient China, we plan to <br />
-                    <span style="color: #FF7F50; font-weight: 700;">"revive the mind of Medieval Europe"</span><br />
+                    <span style="color: #FF7F50; font-weight: 700;">revive the mind of Medieval Europe</span><br />
                     using the same method <br />
                     (PLMs & LLMs).</p>
                 <img :src="'./assets/image/2025100719.png'" alt="" srcset="">
@@ -111,3 +111,4 @@ img {
     text-indent: -1em;
 }
 </style>
+
