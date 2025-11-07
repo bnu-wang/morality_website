@@ -47,6 +47,7 @@ const showDrawer = ref(false);
 
 .title h2 {
     font-weight: bold;
+    font-size: 42px;
 }
 .left {
     grid-column: 1 / 7;

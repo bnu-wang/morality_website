@@ -5,7 +5,7 @@
 <template>
     <div class="container">
         <div class="title">
-            <h2 style="text-align: center;font-weight: 400;font-size: 1.5em;">
+            <h2 style="text-align: center;font-weight: 400;">
                 SIS model can be replicated in ancient times
             </h2>
         </div>
