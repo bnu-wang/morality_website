@@ -22,8 +22,8 @@ const selectAction = (item: any) => {
     if (type === "harm") {
         if (data.harm.data[0].text.length === data.harm.words.length) {
             data.harm.data[0].marker.size.push(20);
-            data.harm.data[0].marker.color.push("rgba(0,0,255,1)");
-            data.harm.data[0].marker.line.color.push("rgba(0,0,255,1)");
+            data.harm.data[0].marker.color.push("rgba(79,86,255,1)");
+            data.harm.data[0].marker.line.color.push("rgba(79,86,255,1)");
             data.harm.data[0].x.push(data.harm.data[0].x[index]);
             data.harm.data[0].y.push(data.harm.data[0].y[index]);
             data.harm.data[0].text.push(data.harm.data[0].text[index]);
@@ -37,8 +37,8 @@ const selectAction = (item: any) => {
     } else if (type === "sacrifice") {
         if (data.sacrifice.data[0].text.length === data.sacrifice.words.length) {
             data.sacrifice.data[0].marker.size.push(20);
-            data.sacrifice.data[0].marker.color.push("rgba(0,0,255,1)");
-            data.sacrifice.data[0].marker.line.color.push("rgba(0,0,255,1)");
+            data.sacrifice.data[0].marker.color.push("rgba(79,86,255,1)");
+            data.sacrifice.data[0].marker.line.color.push("rgba(79,86,255,1)");
             data.sacrifice.data[0].x.push(data.sacrifice.data[0].x[index]);
             data.sacrifice.data[0].y.push(data.sacrifice.data[0].y[index]);
             data.sacrifice.data[0].text.push(data.sacrifice.data[0].text[index]);
@@ -153,3 +153,4 @@ onMounted(() => {
 }
 
 </style>
+
