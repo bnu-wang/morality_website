@@ -5,7 +5,7 @@
 <template>
     <div class="container">
         <div class="title">
-            <h1>Human use the SIS model to navigate the moral space.</h1>
+            <h1>Humans use the SIS model to navigate the moral space.</h1>
         </div>
         <div class="a">
             <img :src="'./assets/image/2025100731new.png'" alt="" srcset="">
@@ -36,3 +36,4 @@
     width: 85%;
 }
 </style>
+

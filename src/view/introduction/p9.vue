@@ -26,7 +26,7 @@
                 </li>
             </ul>
             <div class="img">
-                <img :src="'./assets/image/2025100713.png'" alt="">
+                <img :src="'./assets/image/Multidisciplinary.png'" alt="">
                 <p>Papers since 1899<br />(n = 59,381)</p>
             </div>
             <div class="desc">
@@ -77,3 +77,4 @@ img {
     width: 100%;
 }
 </style>
+
