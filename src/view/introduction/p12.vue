@@ -13,7 +13,8 @@
             </p>
             <p class="f-n">
                 Do all humans share a common moral foundation? <br>
-                Our project uncovers the universal structure behind the world's many moral codes.
+                Our project seeks to reveal the universal patterns <br>
+                underlying diverse moral codes found around the world.
             </p>
         </div>
         <div class="b">
@@ -41,9 +42,12 @@
                 Our Data-Driven Approach
             </p>
             <p class="f-n">
-                We integrate dozens of existing models to find a shared, core structure.
-                <br />Across Space: We analyze data from people all over the globe.
-                <br />Across Time: We study ancient texts from different civilizations.
+                We integrate dozens of existing models <br>
+                to find a shared, core structure. <br>
+                Across Space: We collect data from <br>
+                people all over the globe. <br>
+                Across Time: We examine ancient texts <br>
+                from different civilizations.
             </p>
         </div>
         <div class="h">
@@ -51,14 +55,20 @@
                 A Safer Future for AI
             </p>
             <p class="f-n">
-                The result is a simple 3D model of human morality. This model gives us a clear, global, and proven blueprint to align AI's values with our own, ensuring they are ethical and safe.
+                A fundamental of human morality provides a <br>
+                clear, global, and empirically grounded <br>
+                blueprint for aligning AI's values with our own, <br>
+                ensuring that AI systems are ethical and safe.
             </p>
         </div>
         <div class="i">
             <p>
                 AI Safety
             </p>
-            <img :src="'./assets/image/2025101704.png'" alt="">
+            <div class="i-imgs">
+                <img :src="'./assets/image/2025101704_left.png'" alt="" class="i-img-left">
+                <img :src="'./assets/image/2025101704_right.png'" alt="" class="i-img-right">
+            </div>
         </div>
     </div>
 </template>
@@ -148,5 +158,27 @@
 
 img {
     width: 100%;
+}
+
+.i-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.i-img-left{
+    width: 152px;
+    height: 143px;
+    object-fit: contain;
+    top: 1032px;
+    left: 1101px;
+}
+.i-img-right {
+    width: 274px;
+    height: 211px;
+    object-fit: contain;
+    top: 1003px;
+    left: 1196px;
 }
 </style>

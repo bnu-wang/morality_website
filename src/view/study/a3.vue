@@ -8,10 +8,10 @@
             <h2>Stable SIS model</h2>
         </div>
         <div class="l">
-            <h3>⭐ Model validation across analytical methods : </h3>
+            <h3>⭐ Model validation across analytical methods</h3>
             <p class="w"><span>PCA & EFA:</span> Spearman’s correlations of moral action scores across methods remained relatively high (all r > 0.98, P < 0.001), the model seems to be very stable and generalizable across analytical techniques. The significance of PCA scores was determined using a two-tailed test.</p>
             <img :src="'./assets/image/2025100813.png'" alt="" srcset="">
-            <h3>⭐ Model validation across online platforms: </h3>
+            <h3>⭐ Model validation across online platforms</h3>
             <p class="w"><span>Recruited participants via Prolific (n = 870):</span> Spearman’s correlation of moral action scores across different platforms remained relatively high (all r > 0.53, P < 0.001), indicating that the model can be replicated across online platforms. The significance of PCA scores was determined using a two-tailed test.</p>
             <img :src="'./assets/image/2025100814.png'" alt="" srcset="">
         </div>

@@ -11,7 +11,7 @@ const showDrawer = ref(false);
             <h1>Materials: A comprehensive set of morally relevant features</h1>
         </div>
         <div class="a">
-            <img :src="'./assets/image/2025102103.png'" alt="" srcset="">
+            <img :src="'./assets/image/2025102103new.png'" alt="" srcset="">
             <div class="more" @click="showDrawer = true">Read more—</div>
         </div>
         <el-drawer v-model="showDrawer"
@@ -34,6 +34,11 @@ const showDrawer = ref(false);
 
 .title {
     grid-column: 1 / 13;
+    text-align: center;
+}
+
+.title h1 {
+    font-weight: bold;
 }
 .a {
     grid-column: 1 / 13;
@@ -46,9 +51,10 @@ const showDrawer = ref(false);
 }
 .a .more {
     position: absolute;
-    bottom: 43%;
-    right: 12%;
+    bottom: 39%;
+    right: 4%;
     text-decoration: underline;
     cursor: pointer;
+    opacity: 0;
 }
 </style>

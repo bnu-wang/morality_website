@@ -44,6 +44,11 @@ const showDrawer = ref(false);
     grid-column: 1 / 13;
     text-align: center;
 }
+
+.title h2 {
+    font-weight: bold;
+    font-size: 42px;
+}
 .left {
     grid-column: 1 / 7;
 }

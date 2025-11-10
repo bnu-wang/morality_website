@@ -37,6 +37,11 @@ const showDrawer2 = ref(false);
     margin: 0 auto;
 }
 
+.container h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
 .box1 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
