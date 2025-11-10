@@ -26,8 +26,7 @@
                 </li>
             </ul>
             <div class="img">
-                <img :src="'./assets/image/2025100713.png'" alt="">
-                <p>Papers since 1899<br />(n = 59,381)</p>
+                <img :src="'./assets/image/Multidisciplinary.png'" alt="">
             </div>
             <div class="desc">
                 <p>We integrate theories from various disciplines and classical viewpoints of religious philosophy,
@@ -64,8 +63,7 @@
     grid-column: 8 / 13;
 }
 
-.left .img img { width: 60%; }
-.left .img p { width: 35%; text-align: center; font-size: 22px; font-weight: 700; font-style: italic; }
+.left .img img { width: 80%; }
 .left .img {
     display: flex;
     flex-direction: row;
@@ -77,3 +75,5 @@ img {
     width: 100%;
 }
 </style>
+
+
