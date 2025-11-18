@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import LazyImage from '../../components/LazyImage.vue';
 </script>
 
 <template>
@@ -14,10 +14,10 @@
             </p>
         </div>
         <div class="p2">
-            <img :src="'./assets/image/2025100807.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025100807.png'" alt=""></LazyImage>
         </div>
         <div class="p3">
-            <img :src="'./assets/image/2025100808.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025100808.png'" alt=""></LazyImage>
         </div>
         <div class="p4">
             <h3>⭐ Method 2: </h3>
@@ -26,10 +26,10 @@
             </p>
         </div>
         <div class="p5">
-            <img :src="'./assets/image/2025100809.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025100809.png'" alt=""></LazyImage>
         </div>
         <div class="p6">
-            <img :src="'./assets/image/2025100810.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025100810.png'" alt=""></LazyImage>
         </div>
         <div class="p7">
             <strong>All results revealed that the optimal number of PCA was 3 !!!</strong>
@@ -79,7 +79,72 @@
     line-height: 28px;
 }
 
-img {
+:deep(img) {
     width: 100%;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 5px;
+        padding: 0 15px;
+    }
+
+    .title {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .title h2 {
+        font-size: 18px;
+        line-height: 1.4em;
+    }
+
+    .p1 {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .p2 {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .p3 {
+        grid-column: 1 / 13;
+        margin-bottom: 20px;
+    }
+
+    .p4 {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .p5 {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .p6 {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .p7 {
+        grid-column: 1 / 13;
+        font-size: 16px;
+        line-height: 1.4em;
+    }
+
+    .p1 h3, .p4 h3 {
+        font-size: 16px;
+        line-height: 1.4em;
+        margin: 10px 0;
+    }
+
+    .w {
+        font-size: 14px;
+        line-height: 1.6em;
+    }
 }
 </style>

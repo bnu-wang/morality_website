@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import LazyImage from '../../components/LazyImage.vue';
 </script>
 
 <template>
@@ -10,18 +10,18 @@
             </div>
             <div class="b">
                 <p class="title">18 Global Countries (n = 10,800)</p>
-                <p class="desc" style="padding: 0px 85px 0px 52px;">We plan to collect data from participants in 18 culturally diverse countries across five continents and in 11 languages collectively representing more than half of the world’s population.</p>
+                <p class="desc" style="padding: 0px 85px 0px 52px;">We plan to collect data from participants in 18 culturally diverse countries across five continents and in 11 languages collectively representing more than half of the world's population.</p>
             </div>
             <div class="a">
-                <img :src="'./assets/image/2025102104.png'" alt="" srcset="">
-            </div>
-            <div class="d">
-                <img :src="'./assets/image/2025102105.png'" alt="">
+                <LazyImage :src="'./assets/image/2025102104.png'" alt=""></LazyImage>
             </div>
             <div class="c">
                 <p class="title">Underlying Mechanisms<br />for Regional Differences</p>
                 <p class="desc">To explain differences in moral conceptual space across regions, we draw on variables
                     from a multinational database covering cultural, economic, and ecological domains.</p>
+            </div>
+            <div class="d">
+                <LazyImage :src="'./assets/image/2025102105.png'" alt=""></LazyImage>
             </div>
         </div>
     </div>
@@ -39,12 +39,14 @@
 
 .title {
     grid-column: 1 / 13;
+    margin-bottom: 20px;
 }
 .title > h1 {
     font-size: 40px;
-    line-height: 56px;
+    line-height: 1.5em;
     text-align: center;
     font-weight: 700;
+    margin-top: -30px;
 }
 
 .b {
@@ -66,9 +68,13 @@
     margin: 80px 0 0 0;
 }
 
-.a img,
-.d img {
+.a :deep(img) {
     width: 100%;
+}
+
+.d :deep(img) {
+    width: 100%;
+    margin-left: 50px;
 }
 
 .b .title,
@@ -85,5 +91,58 @@
     font-size: 24px;
     line-height: 32px;
     text-align: left;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 5px;
+        padding: 0 15px;
+    }
+
+    .title > h1 {
+        font-size: 20px;
+        line-height: 1.4em;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .b {
+        grid-column: 1 / 13;
+        margin-bottom: 20px;
+    }
+
+    .a {
+        grid-column: 1 / 13;
+        margin-bottom: 20px;
+    }
+
+    .d {
+        grid-column: 1 / 13;
+        margin: 20px 0;
+    }
+
+    .c {
+        grid-column: 1 / 13;
+        margin: 20px 0;
+    }
+
+    .b .title,
+    .c .title {
+        font-size: 18px;
+        line-height: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    .b .desc,
+    .c .desc {
+        font-size: 14px;
+        line-height: 1.6em;
+        padding: 0 !important;
+    }
+
+    .d :deep(img) {
+        margin-left: 0;
+    }
 }
 </style>

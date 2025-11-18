@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import LazyImage from '../../components/LazyImage.vue';
 </script>
 
 <template>
@@ -8,21 +8,18 @@
             <p>Geometric symmetry between the <span style="color: #C00000;">Evil</span> and <span style="color: #027D33;">Good</span></p>
         </div>
         <div class="a">
-            <img :src="'./assets/image/2025102108.png'" alt="" srcset="">
-        </div>
-        <div class="b">
-            <img :src="'./assets/image/2025102109.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025102108new.png'" alt=""></LazyImage>
         </div>
         <div class="c">
             <p>
-                By identifying 52 pairs of actions that are highly symmetric—meaning they involve similar situations but opposite moral values—we found that each good action’s score on a moral dimension (like caring for others) was strongly linked to its evil counterpart (like harming others) on the matching dimension, but not on the other axes. 
+                By identifying several pairs of actions that are highly symmetric—meaning they involve similar situations but opposite moral values—we found that each good action's score on a moral dimension (like caring for others) was strongly linked to its evil counterpart (like harming others) on the matching dimension, but not on the other axes. 
             </p>
         </div>
         <div class="t">
             <p>Link between <span style="font-style: italic;">up-stream</span> and <span style="font-style: italic;">down-stream</span></p>
         </div>
         <div class="e">
-            <img :src="'./assets/image/2025102110.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025102110new.png'" alt=""></LazyImage>
         </div>
         <div class="f">
             <p>
@@ -44,33 +41,73 @@
 }
 
 .t { grid-column: 1 / 13; }
-.a { grid-column: 1 / 9; grid-row: 2 / 3; }
-.b { grid-column: 9 / 13; grid-row: 2 / 4; }
-.c { grid-column: 1 / 9; grid-row: 3 / 4; }
-.e { grid-column: 1 / 10; grid-row: 6 / 7; }
-.f { grid-column: 10 / 13; grid-row: 6 / 7; }
+.a { grid-column: 1 / 13; grid-row: 2 / 3; }
+.c { grid-column: 1 / 13; grid-row: 3 / 4; }
+.e { grid-column: 1 / 7; grid-row: 6 / 7; }
+.f { grid-column: 7 / 13; grid-row: 6 / 7; }
 
 .t p {
-    font-size: 38px;
+    font-size: 40px;
     font-weight: 700;
+    text-align: center;
 }
 .c p {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 300;
     line-height: 1.5em;
 }
 .f p {
     margin: 0 0 0 15px;
     text-align: justify;
-    font-size: 21px;
+    font-size: 26px;
     font-weight: 300;
     line-height: 1.5em;
 }
 
-img {
+:deep(img) {
     width: 100%;
 }
-.a img {
-    width: calc(100% + 5px);
+.a :deep(img) {
+    width: 100%;
+}
+.e :deep(img) {
+    width: 100%;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 5px;
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .t p {
+        font-size: 18px;
+        line-height: 1.4em;
+        margin: 15px 0;
+    }
+
+    .c p {
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+
+    .e {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 15px;
+    }
+
+    .f {
+        grid-column: 1 / 13;
+        grid-row: auto;
+    }
+
+    .f p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6em;
+    }
 }
 </style>

@@ -63,7 +63,7 @@ const click = (e: Person) => {
                 to view their viewpoints.</div>
             <div class="show">
                 <el-avatar :size="154" :src="curr.avator">
-                    <img src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" alt=""></img>
+                    <img src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" alt="" />
                 </el-avatar>
                 <p>{{ curr.word }}</p>
             </div>
@@ -200,5 +200,100 @@ const click = (e: Person) => {
 .m-box .t-box .d {
     font-size: 14px;
     line-height: 20px;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 10px;
+        padding: 0 15px;
+    }
+
+    .title {
+        grid-column: 1 / 13;
+    }
+
+    .title h1 {
+        font-size: 20px;
+        line-height: 1.4em;
+        margin: 15px 0;
+    }
+
+    .left {
+        grid-column: 1 / 13;
+        margin-bottom: 20px;
+    }
+
+    .mid {
+        grid-column: 1 / 13;
+        margin-bottom: 20px;
+    }
+
+    .right {
+        grid-column: 1 / 13;
+    }
+
+    .left h2,
+    .right h2 {
+        font-size: 18px;
+        line-height: 1.4em;
+        margin: 10px 0;
+    }
+
+    .mid h1 {
+        font-size: 18px;
+        line-height: 1.4em;
+        margin: 10px 0;
+    }
+
+    .mid .show {
+        height: auto;
+        min-height: 300px;
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .mid .show p {
+        font-size: 14px;
+        line-height: 1.6em;
+        padding: 10px;
+    }
+
+    .mid div {
+        font-size: 14px;
+    }
+
+    .m-box {
+        height: auto;
+        min-height: 80px;
+        margin: 15px 0;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .m-box .avatar {
+        width: 50px;
+        margin: 0 10px 0 0;
+    }
+
+    .m-box .t-box {
+        width: calc(100% - 70px);
+    }
+
+    .m-box .t-box .t {
+        font-size: 16px;
+        line-height: 1.3em;
+    }
+
+    .m-box .t-box .d {
+        font-size: 12px;
+        line-height: 1.4em;
+    }
+
+    :deep(.el-avatar) {
+        width: 80px !important;
+        height: 80px !important;
+    }
 }
 </style>
