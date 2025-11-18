@@ -69,4 +69,35 @@ p {
     line-height: 1.5em;
     font-weight: 300;
 }
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 5px;
+        padding: 0 15px;
+    }
+
+    .title h1 {
+        font-size: 24px;
+        line-height: 1.4em;
+        margin: 15px 0;
+    }
+
+    .title p {
+        font-size: 16px;
+        line-height: 1.4em;
+        margin: 10px 0;
+    }
+
+    .desc {
+        padding: 15px 20px;
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+}
 </style>

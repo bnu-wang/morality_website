@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import LazyImage from '../../components/LazyImage.vue';
 </script>
 
 <template>
@@ -8,7 +8,7 @@
             <h3>Which aspects are prioritized when judging moral right and wrong in the USA and CHN?</h3>
         </div>
         <div class="m">
-            <img :src="'./assets/image/2025100104.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025100104.png'" alt=""></LazyImage>
         </div>
     </div>
 </template>
@@ -28,7 +28,7 @@
     text-align: center;
 }
 
-img {
+:deep(img) {
     width: 100%;
 }
 </style>

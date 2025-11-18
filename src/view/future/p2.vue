@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import LazyImage from '../../components/LazyImage.vue';
 </script>
 
 <template>
@@ -13,13 +13,13 @@
                     <span style="color: #FF7F50; font-weight: 700;">revive the mind of Medieval Europe</span><br />
                     using the same method <br />
                     (PLMs & LLMs).</p>
-                <img :src="'./assets/image/2025100719.png'" alt="" srcset="">
+                <LazyImage :src="'./assets/image/2025100719.png'" alt=""></LazyImage>
             </div>
             <div class="right">
                 <p class="tt">How to extract moral actions and their descriptions?</p>
-                <img :src="'./assets/image/2025100720.png'" alt="" srcset="">
+                <LazyImage :src="'./assets/image/2025100720.png'" alt=""></LazyImage>
                 <p class="tt1 f2 s">Philosophy of the Elite <br/>(Summa Confessorum)</p>
-                <p class="tt1 f2 s">Theological works <br/>(The Pilgrim’s Progress)</p>
+                <p class="tt1 f2 s">Theological works <br/>(The Pilgrim's Progress)</p>
                 <p class="tt">How to obtain the representation?</p>
                 <ul>
                     <li>
@@ -81,10 +81,10 @@
     margin: 0;
 }
 
-img {
+:deep(img) {
     width: 100%;
 }
-.left img {
+.left :deep(img) {
     width: 75%;
 }
 
@@ -109,6 +109,65 @@ img {
 
 .i {
     text-indent: -1em;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 5px;
+        padding: 0 15px;
+    }
+
+    .title h1 {
+        font-size: 20px;
+        line-height: 1.4em;
+        margin: 15px 0;
+    }
+
+    .left {
+        grid-column: 1 / 13;
+        margin-bottom: 20px;
+    }
+
+    .right {
+        grid-column: 1 / 13;
+    }
+
+    .left p {
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    .left :deep(img) {
+        width: 100%;
+    }
+
+    .right .tt {
+        font-size: 16px;
+        line-height: 1.4em;
+        margin: 15px 0;
+    }
+
+    .right .tt1 {
+        display: inline-block;
+        width: 48%;
+        margin: 10px 1%;
+        vertical-align: top;
+    }
+
+    .f1 {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    .f2 {
+        font-size: 12px;
+        line-height: 1.5em;
+    }
+
+    .right ul {
+        padding-left: 20px;
+    }
 }
 </style>
 

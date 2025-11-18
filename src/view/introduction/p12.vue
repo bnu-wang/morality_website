@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import LazyImage from '../../components/LazyImage.vue';
 </script>
 
 <template>
@@ -19,23 +19,7 @@
         </div>
         <div class="b">
             <p>Moral Space</p>
-            <img :src="'./assets/image/2025101701.png'" alt="">
-        </div>
-        <div class="c">
-            <p>
-                Cultural Comparisons
-            </p>
-        </div>
-        <div class="d">
-            <img :src="'./assets/image/2025101703.png'" alt="">
-        </div>
-        <div class="e">
-            <p>
-                Historical Evolution
-            </p>
-        </div>
-        <div class="f">
-            <img :src="'./assets/image/2025101702.png'" alt="">
+            <LazyImage :src="'./assets/image/2025101701.png'" alt=""></LazyImage>
         </div>
         <div class="g">
             <p class="f-t">
@@ -49,6 +33,22 @@
                 Across Time: We examine ancient texts <br>
                 from different civilizations.
             </p>
+        </div>
+        <div class="c">
+            <p>
+                Cultural Comparisons
+            </p>
+        </div>
+        <div class="d">
+            <LazyImage :src="'./assets/image/2025101703.png'" alt=""></LazyImage>
+        </div>
+        <div class="e">
+            <p>
+                Historical Evolution
+            </p>
+        </div>
+        <div class="f">
+            <LazyImage :src="'./assets/image/2025101702.png'" alt=""></LazyImage>
         </div>
         <div class="h">
             <p class="f-t">
@@ -66,8 +66,8 @@
                 AI Safety
             </p>
             <div class="i-imgs">
-                <img :src="'./assets/image/2025101704_left.png'" alt="" class="i-img-left">
-                <img :src="'./assets/image/2025101704_right.png'" alt="" class="i-img-right">
+                <LazyImage :src="'./assets/image/2025101704_left.png'" alt="" className="i-img-left"></LazyImage>
+                <LazyImage :src="'./assets/image/2025101704_right.png'" alt="" className="i-img-right"></LazyImage>
             </div>
         </div>
     </div>
@@ -156,7 +156,7 @@
     font-weight: 300;
 }
 
-img {
+:deep(img) {
     width: 100%;
 }
 
@@ -180,5 +180,128 @@ img {
     object-fit: contain;
     top: 1003px;
     left: 1196px;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 10px;
+        grid-template-rows: auto;
+        padding: 0 15px;
+    }
+
+    .title {
+        grid-column: 1 / 13;
+        grid-row: auto;
+    }
+
+    .title h1 {
+        font-size: 20px !important;
+        line-height: 1.4em !important;
+        margin: 15px 0;
+    }
+
+    .a {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 20px;
+    }
+
+    .b {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 20px;
+    }
+
+    .b :deep(img) {
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .c {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 10px;
+    }
+
+    .d {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 20px;
+    }
+
+    .e {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 10px;
+    }
+
+    .f {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 20px;
+    }
+
+    .g {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 20px;
+    }
+
+    .h {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 20px;
+    }
+
+    .i {
+        grid-column: 1 / 13;
+        grid-row: auto;
+        margin-bottom: 20px;
+    }
+
+    .b p, .i p {
+        font-size: 18px;
+    }
+
+    .c p, .e p {
+        font-size: 18px;
+        line-height: 1.4em;
+    }
+
+    .f-t {
+        font-size: 18px;
+        line-height: 1.4em;
+    }
+
+    .f-n {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    .i-imgs {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .i-imgs :deep(.lazy-image-wrapper) {
+        width: auto;
+        display: inline-block;
+    }
+
+    :deep(.i-img-left) {
+        width: 120px !important;
+        height: auto !important;
+        max-width: 120px;
+    }
+
+    :deep(.i-img-right) {
+        width: 180px !important;
+        height: auto !important;
+        max-width: 180px;
+    }
 }
 </style>

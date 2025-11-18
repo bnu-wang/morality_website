@@ -74,6 +74,43 @@
 img {
     width: 100%;
 }
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 10px;
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .left {
+        grid-column: 1 / 13;
+    }
+
+    .right {
+        grid-column: 1 / 13;
+        margin-top: 20px;
+    }
+
+    .left h1 {
+        font-size: 20px;
+        line-height: 1.4em;
+        margin: 15px 0;
+    }
+
+    .left p {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    .left ul {
+        padding-left: 20px;
+    }
+
+    .left .img img {
+        width: 100%;
+    }
+}
 </style>
 
 

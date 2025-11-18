@@ -136,4 +136,40 @@ const click = (e: MouseEvent) => {
 .star_ring > div {
     transform-style: preserve-3d;
 }
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .interaction-avator {
+        width: 260px;
+        height: 260px;
+    }
+
+    .ele {
+        width: 135px;
+        height: 135px;
+    }
+
+    .ele::after {
+        font-size: 48px;
+    }
+
+    .ele::before {
+        font-size: 16px;
+        width: 280px;
+    }
+
+    .avator {
+        width: 65px;
+        height: 65px;
+        transform: translate(-50%, -50%) 
+                   rotate(calc(-32deg * var(--i))) 
+                   translate(-205px, 0px)
+                   rotate(calc(32deg * var(--i)))
+                   rotateX(-75deg);
+    }
+
+    .star_ring {
+        transform: translateY(105px) perspective(1000px) rotateX(75deg);
+    }
+}
 </style>

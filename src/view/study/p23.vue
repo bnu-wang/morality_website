@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import LazyImage from '../../components/LazyImage.vue';
 </script>
 
 <template>
@@ -11,7 +11,7 @@
             </h2>
         </div>
         <div class="a">
-            <img :src="'./assets/image/2025102111.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025102111.png'" alt=""></LazyImage>
         </div>
         <div class="b">
             <p>
@@ -19,7 +19,7 @@
             </p>
         </div>
         <div class="c">
-            <img :src="'./assets/image/2025102112.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025102112.png'" alt=""></LazyImage>
         </div>
     </div>
 </template>
@@ -49,8 +49,40 @@
     font-weight: 300;
 }
 
-img {
+:deep(img) {
     width: 100%;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 5px;
+        padding: 0 15px;
+    }
+
+    .h {
+        font-size: 14px !important;
+    }
+
+    .h h2 {
+        font-size: 18px !important;
+        line-height: 1.4em !important;
+        margin: 15px 0;
+    }
+
+    .a {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .b {
+        grid-column: 1 / 13;
+    }
+
+    .b p {
+        font-size: 14px;
+        line-height: 1.6em;
+    }
 }
 </style>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import LazyImage from '../../components/LazyImage.vue';
 </script>
 
 <template>
@@ -9,17 +9,17 @@
         </div>
         <div class="lt">
             <p>
-                We compared ancient and modern Chinese moral views by analyzing how much each dimension contributed to the overall moral framework in each period. Ancient Chinese emphasized "care for others" and “harm to others," reflecting Confucian virtues like Ren (benevolence). In contrast, modern Chinese prioritizes societal level, underscoring the importance of collectivism and national interests in today's society.
+                We compared ancient and modern Chinese moral views by analyzing how much each dimension contributed to the overall moral framework in each period. Ancient Chinese emphasized "care for others" and "harm to others," reflecting Confucian virtues like Ren (benevolence). In contrast, modern Chinese prioritizes societal level, underscoring the importance of collectivism and national interests in today's society.
             </p>
         </div>
         <div class="rt">
-            <img :src="'./assets/image/2025102106.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025102106.png'" alt=""></LazyImage>
         </div>
         <div class="lb">
-            <img :src="'./assets/image/2025102107.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025102107.png'" alt=""></LazyImage>
         </div>
         <div class="mb">
-            <p>We’ll employ a more <strong>refined hybrid retrieval method</strong> to track the evolution of ideas
+            <p>We'll employ a more <strong>refined hybrid retrieval method</strong> to track the evolution of ideas
                 within a vast 3,000-year Classical Chinese corpus.</p>
             <p>
                 Preliminary findings show that "self-control" dips during the Six Dynasties (collapse of centralized
@@ -29,15 +29,15 @@
         <div class="rb">
             <div>
                 <div>
-                    <img :src="'./assets/image/2025100803.png'" alt="" srcset=""></img>
+                    <LazyImage :src="'./assets/image/2025100803new1.png'" alt=""></LazyImage>
                 </div>
                 <div class="icon ip2"></div>
                 <div class="s p1">
-                    <img :src="'./assets/image/2025100816.png'" alt="">
+                    <LazyImage :src="'./assets/image/2025100816.png'" alt=""></LazyImage>
                 </div>
                 <div class="icon ip1"></div>
                 <div class="s p2">
-                    <img :src="'./assets/image/2025100817.png'" alt="">
+                    <LazyImage :src="'./assets/image/2025100817.png'" alt=""></LazyImage>
                 </div>
             </div>
             <p style="font-size: 16px; text-align: center; margin: 0; font-weight: 100;">Hover over the dot to see the details.</p>
@@ -132,13 +132,16 @@
     background-color: red;
     border-radius: 50%;
 }
-.rb .icon.ip1 {
-    bottom: 48%;
-    left: 62.5%;
-}
-.rb .icon.ip2 {
-    bottom: 26%;
-    left: 43%;
+/* PC端样式 */
+@media (min-width: 601px) {
+    .rb .icon.ip1 {
+        bottom: 48%;
+        left: 60.5%;
+    }
+    .rb .icon.ip2 {
+        bottom: 26%;
+        left: 40%;
+    }
 }
 .ip1:hover +.p2 {
     visibility: visible;
@@ -147,7 +150,78 @@
     visibility: visible;
 }
 
-img {
+:deep(img) {
     width: 100%;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 10px;
+        font-size: 14px;
+        line-height: 1.5em;
+        padding: 0 15px;
+    }
+
+    .title h2 {
+        font-size: 18px;
+        line-height: 1.4em;
+        margin: 15px 0;
+    }
+
+    .lt {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .rt {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .lb {
+        grid-column: 1 / 13;
+        margin: 0 0 15px 0;
+    }
+
+    .mb {
+        grid-column: 1 / 13;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .rb {
+        grid-column: 1 / 13;
+    }
+
+    .lt p,
+    .mb p {
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+
+    .mb p:nth-child(1)::before,
+    .mb p:nth-child(2)::before {
+        display: none;
+    }
+
+    .rb .icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .rb .s {
+        width: 90%;
+    }
+
+    .rb .icon.ip1 {
+        bottom: 48%;
+        left: 61%;
+    }
+
+    .rb .icon.ip2 {
+        bottom: 26%;
+        left: 40%;
+    }
 }
 </style>

@@ -77,5 +77,15 @@ onUnmounted(() => {
 <style lang="css" scoped>
 canvas {
     width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+/* 移动端样式 */
+@media screen and (max-width: 768px) {
+    canvas {
+        height: auto;
+        max-width: 100%;
+    }
 }
 </style>
