@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import LazyImage from '../../components/LazyImage.vue';
 </script>
 
 <template>
@@ -9,16 +9,16 @@
             <p class="w">Use RoBERTa to vectorize our set of feature words (40 for good, 40 for evil) and the comprehensive list of feature words from literature and human reports (a total of 2,023 words).</p>
         </div>
         <div class="rt">
-            <img :src="'./assets/image/2025100805.png'" alt="" srcset="">
+            <LazyImage :src="'./assets/image/2025100805.png'" alt=""></LazyImage>
         </div>
         <div class="lb">
-            <img :src="'./assets/image/2025100806.png'" alt="" srcset="">
-        </div>
-        <div class="rb">
             <h3>⭐ Step 2: </h3>
             <p class="w">
                 Calculate the cosine similarity between our feature words (pairwise correlations among the 40 good words and pairwise correlations among the 40 evil words), and obtain the distribution of these pairwise correlation values, using the mean as the threshold.
             </p>
+            <LazyImage :src="'./assets/image/2025100806.png'" alt=""></LazyImage>
+        </div>
+        <div class="rb">
             <h3>⭐ Step 3: </h3>
             <p class="w">
                 According to the standard from Lin (2021): if the similarity between a new word and the closest word in the existing word set is greater than the mean pairwise correlation of the existing word set, then the meaning of this new word is considered to be covered by the existing word set. Our feature word set (40 for good, 40 for evil) can cover more than 95% of the comprehensive feature words (a total of 2,023 words).
@@ -26,7 +26,7 @@
         </div>
         <div class="bb">
             <p class="desc">
-                Lin, C., Keles, U., & Adolphs, R. (2021). Four dimensions characterize attributions from faces using a representative set of English trait words. Nature Communications, 12(1), 5168.
+                Lin, C., Keles, U., & Adolphs, R. (2021). Four dimensions characterize attributions from faces using a representative set of English trait words. Nature Communications, 12(1), 5168.
             </p>
         </div>
     </div>
@@ -71,7 +71,55 @@ h3 {
     font-weight: 300;
 }
 
-img {
+:deep(img) {
     width: 100%;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .container {
+        grid-column-gap: 5px;
+        padding: 0 15px;
+    }
+
+    .lt {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .rt {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .lb {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .rb {
+        grid-column: 1 / 13;
+        margin-bottom: 15px;
+    }
+
+    .bb {
+        grid-column: 1 / 13;
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 1.4em;
+        margin: 10px 0;
+    }
+
+    .w {
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+
+    .desc {
+        font-size: 12px;
+        line-height: 1.5em;
+    }
 }
 </style>
