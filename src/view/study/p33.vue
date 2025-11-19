@@ -220,8 +220,8 @@ import LazyImage from '../../components/LazyImage.vue';
     }
 
     .rb .icon.ip2 {
-        bottom: 26%;
-        left: 40%;
+        bottom: 25%;
+        left: 41%;
     }
 }
 </style>

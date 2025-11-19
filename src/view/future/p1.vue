@@ -15,13 +15,13 @@ import LazyImage from '../../components/LazyImage.vue';
             <div class="a">
                 <LazyImage :src="'./assets/image/2025102104.png'" alt=""></LazyImage>
             </div>
-            <div class="c">
-                <p class="title">Underlying Mechanisms<br />for Regional Differences</p>
+            <div class="d pc-align-image">
+                <LazyImage :src="'./assets/image/2025102105.png'" alt=""></LazyImage>
+            </div>
+            <div class="c pc-align-text">
+                <p class="title pc-text-title">Underlying Mechanisms<br />for Regional Differences</p>
                 <p class="desc">To explain differences in moral conceptual space across regions, we draw on variables
                     from a multinational database covering cultural, economic, and ecological domains.</p>
-            </div>
-            <div class="d">
-                <LazyImage :src="'./assets/image/2025102105.png'" alt=""></LazyImage>
             </div>
         </div>
     </div>
@@ -35,6 +35,7 @@ import LazyImage from '../../components/LazyImage.vue';
     grid-template-rows: min-content;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
+    align-items: start;
 }
 
 .title {
@@ -58,10 +59,16 @@ import LazyImage from '../../components/LazyImage.vue';
 
 .c {
     grid-column: 7 / 13;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
 }
 
 .d {
     grid-column: 1 / 6;
+    align-self: start;
+    display: flex;
+    align-items: flex-start;
 }
 
 .c, .d {
@@ -75,6 +82,8 @@ import LazyImage from '../../components/LazyImage.vue';
 .d :deep(img) {
     width: 100%;
     margin-left: 50px;
+    display: block;
+    vertical-align: top;
 }
 
 .b .title,
@@ -91,6 +100,36 @@ import LazyImage from '../../components/LazyImage.vue';
     font-size: 24px;
     line-height: 32px;
     text-align: left;
+}
+
+/* PC端专用样式 - 对齐优化 */
+@media (min-width: 601px) {
+    /* 文字区域对齐样式 */
+    .pc-align-text {
+        display: block;
+    }
+    
+    .pc-text-title {
+        text-align: left !important;
+        line-height: 1.2 !important;
+        margin: 0 0 20px 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* 图片区域对齐样式 */
+    .pc-align-image {
+        display: block;
+    }
+    
+    .pc-align-image :deep(.lazy-image-wrapper) {
+        display: block;
+        line-height: 0;
+    }
+    
+    .pc-align-image :deep(img) {
+        display: block;
+        vertical-align: top;
+    }
 }
 
 /* 移动端适配 */

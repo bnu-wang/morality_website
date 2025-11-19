@@ -15,7 +15,7 @@ import LazyImage from '../../components/LazyImage.vue';
 
 <style lang="css" scoped>
 #study1 {
-    scroll-margin-top: 80px; /* 为滚动留出顶部空间 */
+    scroll-margin-top: 80px; /* 为滚动留出顶部空�?*/
 }
 
 .container {
@@ -36,7 +36,7 @@ import LazyImage from '../../components/LazyImage.vue';
 .title h1 {
     font-weight: bold;
 }
-.a :deep(img) {
+.a :deep(.lazy-image-wrapper) {
     width: 85%;
 }
 
@@ -54,7 +54,7 @@ import LazyImage from '../../components/LazyImage.vue';
         margin: 15px 0;
     }
 
-    .a :deep(img) {
+    .a :deep(.lazy-image-wrapper) {
         width: 100%;
     }
 }
