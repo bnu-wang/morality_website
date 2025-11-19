@@ -156,6 +156,7 @@ import LazyImage from '../../components/LazyImage.vue';
     font-weight: 300;
 }
 
+/* 默认图片占满容器 */
 :deep(img) {
     width: 100%;
 }
@@ -167,19 +168,17 @@ import LazyImage from '../../components/LazyImage.vue';
     gap: 40px;
 }
 
-.i-img-left{
+/* 固定尺寸的图片 */
+.i-imgs :deep(img.i-img-left) {
     width: 152px;
     height: 143px;
     object-fit: contain;
-    top: 1032px;
-    left: 1101px;
 }
-.i-img-right {
+
+.i-imgs :deep(img.i-img-right) {
     width: 274px;
     height: 211px;
     object-fit: contain;
-    top: 1003px;
-    left: 1196px;
 }
 
 /* 移动端适配 */
@@ -211,12 +210,12 @@ import LazyImage from '../../components/LazyImage.vue';
         grid-column: 1 / 13;
         grid-row: auto;
         margin-bottom: 20px;
+        text-align: center;
     }
 
-    .b :deep(img) {
+    .b :deep(.lazy-image-wrapper) {
         width: 60%;
         margin: 0 auto;
-        display: block;
     }
 
     .c {
@@ -287,21 +286,14 @@ import LazyImage from '../../components/LazyImage.vue';
         align-items: center;
     }
 
-    .i-imgs :deep(.lazy-image-wrapper) {
-        width: auto;
-        display: inline-block;
+    .i-imgs :deep(img.i-img-left) {
+        width: 120px;
+        height: auto;
     }
 
-    :deep(.i-img-left) {
-        width: 120px !important;
-        height: auto !important;
-        max-width: 120px;
-    }
-
-    :deep(.i-img-right) {
-        width: 180px !important;
-        height: auto !important;
-        max-width: 180px;
+    .i-imgs :deep(img.i-img-right) {
+        width: 180px;
+        height: auto;
     }
 }
 </style>

@@ -68,15 +68,23 @@ onMounted(() => {
 </template>
 
 <style lang="css" scoped>
+/* ==================== PC端配置 ==================== */
+/* PC端：wrapper设置为inline-block，让它收缩到img的实际尺寸，表现得像wrapper不存在 */
 .lazy-image-wrapper {
-    position: relative;
-    width: 100%;
-    min-height: 100px; /* 确保有足够空间显示提示 */
+    display: inline-block;
+    /* 不设置宽度、max-width等限制，完全由img决定尺寸 */
 }
 
+/* PC端：loading和error提示默认隐藏 */
 .loading-text,
 .error-text {
     display: none;
+}
+
+/* 测试模式：如果设置了testDelay，PC端也显示提示（方便测试） */
+.loading-text.test-mode,
+.error-text.test-mode {
+    display: block !important;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -90,23 +98,39 @@ onMounted(() => {
     white-space: nowrap;
 }
 
-/* 只在移动端显示加载提示 */
+/* ==================== 移动端特有配置 ==================== */
+/* 移动端：添加额外的样式配置 */
 @media (max-width: 600px) {
+    /* 移动端：wrapper添加定位和尺寸限制 */
+    .lazy-image-wrapper {
+        position: relative;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    
+    /* 移动端：显示加载提示和错误提示 */
     .loading-text,
     .error-text {
         display: block !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        color: #666;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 8px 16px;
+        border-radius: 4px;
+        z-index: 10;
+        white-space: nowrap;
     }
 }
 
-/* 测试模式：如果设置了testDelay，PC端也显示提示（方便测试） */
-.loading-text.test-mode,
-.error-text.test-mode {
-    display: block !important;
-}
-
+/* img元素默认样式：占满wrapper的宽度 */
 img {
     width: 100%;
     display: block;
 }
 </style>
+
 
