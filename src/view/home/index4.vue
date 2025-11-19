@@ -15,7 +15,12 @@ import LazyImage from "../../components/LazyImage.vue";
                 <div class="b">
                     <StarNew></StarNew>
                 </div>
-                <div class="c">
+                <!-- PC端图片 -->
+                <div class="c pc-only-image">
+                    <LazyImage :src="'./assets/image/2025101501.png'" alt=""></LazyImage>
+                </div>
+                <!-- 移动端图片 -->
+                <div class="c mobile-only-image">
                     <LazyImage :src="'./assets/image/2025101501.png'" alt=""></LazyImage>
                 </div>
             </div>
@@ -66,6 +71,32 @@ import LazyImage from "../../components/LazyImage.vue";
     height: 100%;
 }
 
+/* 默认隐藏移动端图片 */
+.mobile-only-image {
+    display: none;
+}
+
+/* PC端样式 */
+@media screen and (min-width: 769px) {
+    /* 显示PC端图片，隐藏移动端图片 */
+    .pc-only-image {
+        display: block;
+        position: relative;
+        overflow: visible;
+    }
+    
+    .mobile-only-image {
+        display: none !important;
+    }
+    
+    .pc-only-image :deep(img) {
+        width: auto !important;
+        height: auto !important;
+        min-width: 600px !important;
+        max-width: none !important;
+    }
+}
+
 /* 手机端响应式样式 */
 @media screen and (max-width: 768px) {
     .cb {
@@ -112,14 +143,40 @@ import LazyImage from "../../components/LazyImage.vue";
         width: 100%;
     }
     
+    /* 隐藏PC端图片，显示移动端图片 */
+    .pc-only-image {
+        display: none !important;
+    }
+    
+    .mobile-only-image {
+        display: block !important;
+        width: calc(100% + 40px) !important;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        max-width: none !important;
+    }
+    
+    .mobile-only-image :deep(.lazy-image-wrapper) {
+        width: 100% !important;
+        max-width: none !important;
+        display: block !important;
+    }
+    
     .d {
         margin: 30px 0;
     }
     
     :deep(img) {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+    
+    .mobile-only-image :deep(img) {
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
+        display: block !important;
     }
 }
 
@@ -144,6 +201,12 @@ import LazyImage from "../../components/LazyImage.vue";
     .b {
         height: 250px;
         min-height: 250px;
+    }
+    
+    .mobile-only-image {
+        width: calc(100% + 30px) !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
     }
 }
 </style>
