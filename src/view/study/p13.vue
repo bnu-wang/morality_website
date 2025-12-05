@@ -12,7 +12,7 @@ const showDrawer = ref(false);
             <h1>Materials: A comprehensive set of morally relevant features</h1>
         </div>
         <div class="a">
-            <LazyImage :src="'./assets/image/2025102103new.png'" alt=""></LazyImage>
+            <LazyImage :src="'./assets/image/2025102103newn.png'" alt=""></LazyImage>
             <div class="more" @click="showDrawer = true">Read more—</div>
         </div>
         <el-drawer v-model="showDrawer"
