@@ -5,6 +5,7 @@ import P11 from "./p11.vue";
 import P12 from "./p12.vue";
 import P8 from "./p8.vue";
 import P9 from "./p9.vue";
+import P13 from "./p13.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import P9 from "./p9.vue";
         <P9></P9>
         <P10></P10>
         <P11></P11>
+        <P13></P13>
         <P12></P12>
     </layout>
 </template>
