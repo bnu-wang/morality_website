@@ -43,19 +43,9 @@ const handleMenuSelect = (index: string) => {
                                 <el-menu-item index="/introduction">
                                     Background
                                 </el-menu-item>
-                                <el-sub-menu index="study">
+                                <el-menu-item index="study">
                                     Pilot studies
-                                    <!-- <template #title>Pilot studies</template> -->
-                                    <!-- <el-menu-item index="/study?to=study1">
-                                        Study 1: Model structure
-                                    </el-menu-item>
-                                    <el-menu-item index="/study?to=study2">
-                                        Study 2: Cultural comparison
-                                    </el-menu-item>
-                                    <el-menu-item index="/study?to=study3">
-                                        Study 3: Historical evolution
-                                    </el-menu-item> -->
-                                </el-sub-menu>
+                                </el-menu-item>
                                 <el-menu-item index="/future">
                                     Registered report
                                 </el-menu-item>
