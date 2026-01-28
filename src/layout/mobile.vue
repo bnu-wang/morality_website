@@ -41,11 +41,12 @@ const handleMenuSelect = (index: string) => {
                         <template #dropdown>
                             <el-menu :router="false" @select="handleMenuSelect">
                                 <el-menu-item index="/introduction">
-                                    Introduction
+                                    Background
                                 </el-menu-item>
                                 <el-sub-menu index="study">
-                                    <template #title>Findings</template>
-                                    <el-menu-item index="/study?to=study1">
+                                    Pilot studies
+                                    <!-- <template #title>Pilot studies</template> -->
+                                    <!-- <el-menu-item index="/study?to=study1">
                                         Study 1: Model structure
                                     </el-menu-item>
                                     <el-menu-item index="/study?to=study2">
@@ -53,10 +54,10 @@ const handleMenuSelect = (index: string) => {
                                     </el-menu-item>
                                     <el-menu-item index="/study?to=study3">
                                         Study 3: Historical evolution
-                                    </el-menu-item>
+                                    </el-menu-item> -->
                                 </el-sub-menu>
                                 <el-menu-item index="/future">
-                                    Future Plans
+                                    Registered report
                                 </el-menu-item>
                             </el-menu>
                         </template>
