@@ -18,7 +18,7 @@ const paths = [
     <el-container>
         <el-header style="border-bottom: 1px solid #6A7794;">
             <div class="container">
-                <div class="title"><strong @click="goto('/')">Mapping Human Morality</strong></div>
+                <div class="title"><strong @click="goto('/')">Modelling Human Morality</strong></div>
                 <div class="taps">
                     <ul class="nav">
                         <template v-for="path in paths">
@@ -87,4 +87,5 @@ const paths = [
     width: 100%;
     height: 100%;
 }
+
 </style>
