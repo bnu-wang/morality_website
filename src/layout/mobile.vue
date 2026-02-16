@@ -30,7 +30,7 @@ const handleMenuSelect = (index: string) => {
         <el-header>
             <el-menu :router="true" :ellipsis="false" mode="horizontal">
                 <el-menu-item index="/">
-                    Mapping Human Morality
+                    Modelling Human Morality
                 </el-menu-item>
                 <el-menu-item>
                     <span class="explore-text">Explore details</span>

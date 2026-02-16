@@ -9,8 +9,8 @@ import LazyImage from '../../components/LazyImage.vue';
                 <h1>Future plan on contemporary exploration</h1>
             </div>
             <div class="b">
-                <p class="title">18 Global Countries (n = 10,800)</p>
-                <p class="desc" style="padding: 0px 85px 0px 52px;">We plan to collect data from participants in 18 culturally diverse countries across five continents and in 11 languages collectively representing more than half of the world's population.</p>
+                <p class="title">20 Global Countries (n = 10,860)</p>
+                <p class="desc" style="padding: 0px 85px 0px 52px;">We plan to collect data from participants in 20 culturally diverse countries across five continents and in 11 languages collectively representing more than half of the world's population.</p>
             </div>
             <div class="a">
                 <LazyImage :src="'./assets/image/2025102104.png'" alt=""></LazyImage>
