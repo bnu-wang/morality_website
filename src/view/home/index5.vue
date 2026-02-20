@@ -45,7 +45,7 @@ import StarNew from "./components/StarNew.vue";
     grid-column: 1 / 6; 
     grid-row: 1 / 3;
     font-size: 24px;
-    line-height: 1.6;
+    line-height: 2;
     letter-spacing: 0.5px;
     /* text-align: justify; 如果喜欢两端对齐可以加上这行 */
 }
