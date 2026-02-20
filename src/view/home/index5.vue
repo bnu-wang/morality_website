@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import layout from "../../layout/default.vue";
 import StarNew from "./components/StarNew.vue";
-import LazyImage from "../../components/LazyImage.vue";
+// 删除了 LazyImage 的引入，保持代码干净
 </script>
 
 <template>
@@ -21,27 +21,31 @@ import LazyImage from "../../components/LazyImage.vue";
 </template>
 
 <style lang="css" scoped>
+/* 基础容器布局 */
 .cb {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
 }
+
 .container {
     display: grid;
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 40px;
-    align-items: center;
+    grid-column-gap: 40px; /* 增加了列间距，让左右两边呼吸感更强 */
+    align-items: center; /* 确保文字和星空在垂直方向居中对齐 */
 }
 
+/* PC端：左侧文字区域 */
 .a {
-    grid-column: 1 / 8;
+    grid-column: 1 / 8; /* 【重点】从原来的 1/6 扩大到 1/8，给这段长文字充足的横向空间 */
     font-size: 24px;
     line-height: 1.6;
     letter-spacing: 0.5px;
 }
+
 .a .w {
     margin-bottom: 20px;
 }
@@ -51,46 +55,13 @@ import LazyImage from "../../components/LazyImage.vue";
     font-size: 18px;
     color: #666; /* 稍微弱化署名颜色，突出引言主体 */
 }
-  
+
+/* PC端：右侧星空区域 */
 .b {
-    grid-column: 8 / 13;
+    grid-column: 8 / 13; /* 星空组件向右挪，占据剩下的 5 列 */
     width: 100%;
 }
 
-.a .r {
-    text-align: right;
-}
-
-:deep(img) {
-    width: 100%;
-    height: 100%;
-}
-
-/* 默认隐藏移动端图片 */
-.mobile-only-image {
-    display: none;
-}
-
-/* PC端样式 */
-@media screen and (min-width: 769px) {
-    /* 显示PC端图片，隐藏移动端图片 */
-    .pc-only-image {
-        display: block;
-        position: relative;
-        overflow: visible;
-    }
-    
-    .mobile-only-image {
-        display: none !important;
-    }
-    
-    .pc-only-image :deep(img) {
-        width: auto !important;
-        height: auto !important;
-        min-width: 600px !important;
-        max-width: none !important;
-    }
-}
 
 /* 手机端响应式样式 (< 768px) */
 @media screen and (max-width: 768px) {
