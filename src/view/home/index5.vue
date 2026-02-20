@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import layout from "../../layout/default.vue";
 import StarNew from "./components/StarNew.vue";
-// 删除了 LazyImage 的引入，保持代码干净
 </script>
 
 <template>
@@ -24,42 +23,63 @@ import StarNew from "./components/StarNew.vue";
 /* 基础容器布局 */
 .cb {
     display: flex;
-    align-items: center;
+    /* align-items: center;  <- 去掉这个，让 container 决定垂直对齐 */
     width: 100%;
     height: 100%;
+    min-height: 600px; /* 保证整个区域在 PC 上有足够的高度 */
 }
 
 .container {
     display: grid;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%; /* 确保占满宽度 */
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 40px; /* 增加了列间距，让左右两边呼吸感更强 */
-    align-items: center; /* 确保文字和星空在垂直方向居中对齐 */
+    grid-column-gap: 30px; /*稍微减小间距，让两个区块更紧凑 */
+    align-items: center; /* 让左右两个区块在垂直方向上居中对齐 */
 }
 
 /* PC端：左侧文字区域 */
 .a {
-    grid-column: 1 / 8; /* 【重点】从原来的 1/6 扩大到 1/8，给这段长文字充足的横向空间 */
+    /* 【改动点1】宽度变窄，让文字多行显示 */
+    grid-column: 1 / 6; 
+    padding: 20px 0; /* 增加一点上下的呼吸感 */
     font-size: 24px;
     line-height: 1.6;
     letter-spacing: 0.5px;
+    /* text-align: justify; 如果喜欢两端对齐可以加上这行 */
 }
 
 .a .w {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .a .r {
     text-align: right;
     font-size: 18px;
-    color: #666; /* 稍微弱化署名颜色，突出引言主体 */
+    color: #888; 
+    font-style: italic; /* 给署名加个斜体，更有引用感 */
 }
 
 /* PC端：右侧星空区域 */
 .b {
-    grid-column: 8 / 13; /* 星空组件向右挪，占据剩下的 5 列 */
+    /* 【改动点2】宽度变大，占据右侧更多空间 */
+    grid-column: 6 / 13; 
     width: 100%;
+    /* 【改动点3】确保 PC 端有足够的高度，撑大视觉区域 */
+    height: 100%;
+    min-height: 500px; 
+    display: flex;
+    align-items: center; /* 确保 StarNew 组件在区域内居中 */
+    justify-content: center;
+}
+
+/* 确保 StarNew 组件填满区域 b */
+.b :deep(> *) {
+    width: 100%;
+    height: 100%;
+    /* 如果 StarNew 内部是 canvas 或 img，可能需要 object-fit */
+    /* object-fit: cover; */ 
 }
 
 
@@ -67,23 +87,20 @@ import StarNew from "./components/StarNew.vue";
 @media screen and (max-width: 768px) {
     .cb {
         padding: 0 20px;
-        overflow-x: hidden;
-        box-sizing: border-box;
+        min-height: auto; /* 手机端不需要强制最小高度 */
     }
 
     .container {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        max-width: 100%;
-        width: 100%;
         padding: 40px 0;
-        box-sizing: border-box;
     }
     
     .a {
         font-size: 18px;
-        order: 1; /* 保证文字在上面 */
+        order: 1; 
+        padding: 0; /* 手机端去掉额外的 padding */
     }
     
     .a .r {
@@ -91,8 +108,8 @@ import StarNew from "./components/StarNew.vue";
     }
     
     .b {
-        order: 2; /* 保证星空在下面 */
-        width: 100%;
+        order: 2;
+        /* 手机端保持原样，或者根据需要调整 */
         height: 350px;
         min-height: 350px;
     }
