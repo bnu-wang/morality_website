@@ -43,7 +43,7 @@ import StarNew from "./components/StarNew.vue";
 .a {
     /* 【改动点1】宽度变窄，让文字多行显示 */
     grid-column: 1 / 6; 
-    padding: 20px 0; /* 增加一点上下的呼吸感 */
+    grid-row: 1 / 3;
     font-size: 24px;
     line-height: 1.6;
     letter-spacing: 0.5px;
@@ -56,7 +56,7 @@ import StarNew from "./components/StarNew.vue";
 
 .a .r {
     text-align: right;
-    font-size: 18px;
+    font-size: 16px;
     color: #888; 
     font-style: italic; /* 给署名加个斜体，更有引用感 */
 }
