@@ -65,23 +65,17 @@ import StarNew from "./components/StarNew.vue";
 .b {
     /* 【改动点2】宽度变大，占据右侧更多空间 */
     grid-column: 6 / 13; 
-    width: 100%;
-    /* 【改动点3】确保 PC 端有足够的高度，撑大视觉区域 */
-    height: 100%;
-    min-height: 500px; 
+    grid-row: 1 / 3;
     display: flex;
     align-items: center; /* 确保 StarNew 组件在区域内居中 */
     justify-content: center;
 }
 
 /* 确保 StarNew 组件填满区域 b */
-.b :deep(> *) {
-    width: 100%;
-    height: 100%;
-    /* 如果 StarNew 内部是 canvas 或 img，可能需要 object-fit */
-    /* object-fit: cover; */ 
+.b {
+    grid-column: 6 / 13;
+    grid-row: 1 / 3;
 }
-
 
 /* 手机端响应式样式 (< 768px) */
 @media screen and (max-width: 768px) {
@@ -109,9 +103,9 @@ import StarNew from "./components/StarNew.vue";
     
     .b {
         order: 2;
-        /* 手机端保持原样，或者根据需要调整 */
-        height: 350px;
-        min-height: 350px;
+        width: 100%;
+        height: 300px;
+        min-height: 300px;
     }
 }
 
