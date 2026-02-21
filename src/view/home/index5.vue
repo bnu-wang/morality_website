@@ -8,6 +8,10 @@ import StarNew from "./components/StarNew.vue";
         <div class="cb">
             <div class="container">
                 <div class="a">
+                    <p class="w">"Two things awe me most, the starry sky above me and the moral law within me."</p>
+                    <p class="r">——Kant</p>
+                    <p class="w">"  "</p>
+                    <p class="w">"  "</p>
                     <p class="w">“Morality is the science of the relations which exist between the minds, wills and actions of men, in the same manner as geometry is the science of the relations that are found between bodies.”</p>
                     <p class="r">——《Elements of Universal Morality》Baron d'Holbach</p>
                 </div>
@@ -45,7 +49,7 @@ import StarNew from "./components/StarNew.vue";
     grid-column: 1 / 6; 
     grid-row: 1 / 3;
     font-size: 24px;
-    line-height: 2;
+    line-height: 1.6;
     letter-spacing: 0.5px;
     /* text-align: justify; 如果喜欢两端对齐可以加上这行 */
 }
