@@ -8,7 +8,7 @@ import StarNew from "./components/StarNew.vue";
         <div class="cb">
             <div class="container">
                 <div class="a">
-                    <p class="w">"Two things awe me most, the starry sky above me and the moral law within me."</p>
+                    <p class="w">“Two things awe me most, the starry sky above me and the moral law within me.”</p>
                     <p class="r">——Kant</p>
                     <p class="w">  </p>
                     <p class="w">“Morality is the science of the relations which exist between the minds, wills and actions of men, in the same manner as geometry is the science of the relations that are found between bodies.”</p>
