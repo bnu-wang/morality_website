@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import experDefault from '../view/home/index5.vue';
+import experDefault from '../view/home/index6.vue';
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -44,3 +44,4 @@ const router = createRouter({
 
 
 export default router;
+
