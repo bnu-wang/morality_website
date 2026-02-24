@@ -87,6 +87,7 @@ import StarNew from "./components/StarNew.vue";
 /* ===== 新增的底部信息样式 ===== */
 .footer {
     text-align: center;
+    margin-top: -40px;
     padding: 20px;
     font-size: 14px;
     color: #888;
