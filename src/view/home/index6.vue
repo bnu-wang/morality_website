@@ -10,7 +10,7 @@ import StarNew from "./components/StarNew.vue";
                 <div class="a">
                     <p class="w">“Two things awe me most, the starry sky above me and the moral law within me.”</p>
                     <p class="r">——Kant</p>
-                    <p class="w">  </p>
+                    <p class="w"> </p>
                     <p class="w">“Morality is the science of the relations which exist between the minds, wills and actions of men, in the same manner as geometry is the science of the relations that are found between bodies.”</p>
                     <p class="r">——《Elements of Universal Morality》Baron d'Holbach</p>
                 </div>
@@ -19,11 +19,15 @@ import StarNew from "./components/StarNew.vue";
                 </div>
             </div>
         </div>
+        
+        <div class="footer">
+            For more information about this project, please contact Dr. Yin Wang at Beijing Normal University (<a href="mailto:mirrorneuronwang@gmail.com">mirrorneuronwang@gmail.com</a>)
+        </div>
     </layout>
 </template>
 
 <style lang="css" scoped>
-/* 基础容器布局 */
+/* 基础容器布局 (保持原样) */
 .cb {
     display: flex;
     /* align-items: center;  <- 去掉这个，让 container 决定垂直对齐 */
@@ -80,6 +84,27 @@ import StarNew from "./components/StarNew.vue";
     grid-row: 1 / 3;
 }
 
+/* ===== 新增的底部信息样式 ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #888;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.footer a {
+    color: #888;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff; /* 根据你的背景颜色调整，浅色背景可改为 #333 */
+}
+/* =============================== */
+
 /* 手机端响应式样式 (< 768px) */
 @media screen and (max-width: 768px) {
     .cb {
@@ -109,6 +134,12 @@ import StarNew from "./components/StarNew.vue";
         width: 100%;
         height: 300px;
         min-height: 300px;
+    }
+
+    /* 手机端底部信息字号适当缩小 */
+    .footer {
+        font-size: 12px;
+        padding: 10px 20px 20px 20px;
     }
 }
 
