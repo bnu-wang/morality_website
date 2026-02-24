@@ -1,0 +1,1 @@
+import{_ as o}from"./index-vrctrdHt.js";import{o as r,g as s,i as t}from"./vendor-CByJVbOQ.js";const c={},a={class:"para"};function n(e,_){return r(),s("div",a,[t(e.$slots,"default",{},void 0,!0)])}const f=o(c,[["render",n],["__scopeId","data-v-21e4a828"]]);export{f as c};
